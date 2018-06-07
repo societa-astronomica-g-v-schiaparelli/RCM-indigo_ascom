@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_wheel", "indigo_wheel\indigo_wheel.csproj", "{64308775-BD4A-469C-BCAB-3ED830B811AF}"
 EndProject
@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_camera_test", "indig
 		{C07A000F-3E10-4CEA-B632-113EA860C880} = {C07A000F-3E10-4CEA-B632-113EA860C880}
 		{93BD8641-60BD-48C4-AC6E-284ED81505BF} = {93BD8641-60BD-48C4-AC6E-284ED81505BF}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_telescope", "indigo_telescope\indigo_telescope.csproj", "{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -118,8 +120,23 @@ Global
 		{716249C9-5431-4E4C-A638-3E2FE0014732}.Release|x64.Build.0 = Release|x64
 		{716249C9-5431-4E4C-A638-3E2FE0014732}.Release|x86.ActiveCfg = Release|Any CPU
 		{716249C9-5431-4E4C-A638-3E2FE0014732}.Release|x86.Build.0 = Release|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Debug|x64.Build.0 = Debug|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Debug|x86.Build.0 = Debug|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|x64.ActiveCfg = Release|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|x64.Build.0 = Release|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|x86.ActiveCfg = Release|Any CPU
+		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23E50C6F-B2FB-4413-8CD0-CE3DB6BB9071}
 	EndGlobalSection
 EndGlobal

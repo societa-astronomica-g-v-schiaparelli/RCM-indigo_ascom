@@ -21,18 +21,19 @@
 
 #define Camera
 
-using System;
-using System.Runtime.InteropServices;
-using ASCOM.Utilities;
 using ASCOM.DeviceInterface;
-using System.Globalization;
-using System.Collections;
+using ASCOM.Utilities;
 using INDIGO;
-using System.Net;
+using System;
+using System.Collections;
+using System.Globalization;
 using System.IO;
+using System.Net;
+using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace ASCOM.INDIGO {
+namespace ASCOM.INDIGO
+{
 
   [Guid("17b1bb89-ff1f-4381-8414-0205d33f9654")]
   [ClassInterface(ClassInterfaceType.None)]
