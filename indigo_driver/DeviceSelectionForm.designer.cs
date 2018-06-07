@@ -1,7 +1,5 @@
-namespace ASCOM.INDIGO
-{
-  partial class DeviceSelectionForm
-  {
+namespace ASCOM.INDIGO {
+  partial class DeviceSelectionForm {
     /// <summary>
     /// Required designer variable.
     /// </summary>
@@ -11,10 +9,8 @@ namespace ASCOM.INDIGO
     /// Clean up any resources being used.
     /// </summary>
     /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    protected override void Dispose(bool disposing)
-    {
-      if (disposing && (components != null))
-      {
+    protected override void Dispose(bool disposing) {
+      if (disposing && (components != null)) {
         components.Dispose();
       }
       base.Dispose(disposing);
@@ -26,8 +22,7 @@ namespace ASCOM.INDIGO
     /// Required method for Designer support - do not modify
     /// the contents of this method with the code editor.
     /// </summary>
-    private void InitializeComponent()
-    {
+    private void InitializeComponent() {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceSelectionForm));
       this.okButton = new System.Windows.Forms.Button();
       this.cancelButton = new System.Windows.Forms.Button();
@@ -75,8 +70,8 @@ namespace ASCOM.INDIGO
       // 
       // tree
       // 
-      this.tree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+      this.tree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.tree.Location = new System.Drawing.Point(13, 13);
       this.tree.Name = "tree";

@@ -1,7 +1,5 @@
-﻿namespace ASCOM.INDIGO
-{
-  partial class TestForm
-  {
+﻿namespace ASCOM.INDIGO {
+  partial class TestForm {
     /// <summary>
     /// Required designer variable.
     /// </summary>
@@ -11,10 +9,8 @@
     /// Clean up any resources being used.
     /// </summary>
     /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    protected override void Dispose(bool disposing)
-    {
-      if (disposing && (components != null))
-      {
+    protected override void Dispose(bool disposing) {
+      if (disposing && (components != null)) {
         components.Dispose();
       }
       base.Dispose(disposing);
@@ -26,8 +22,7 @@
     /// Required method for Designer support - do not modify
     /// the contents of this method with the code editor.
     /// </summary>
-    private void InitializeComponent()
-    {
+    private void InitializeComponent() {
       this.buttonChoose = new System.Windows.Forms.Button();
       this.buttonConnect = new System.Windows.Forms.Button();
       this.listBoxSlots = new System.Windows.Forms.ListBox();
@@ -59,8 +54,8 @@
       // 
       // listBoxSlots
       // 
-      this.listBoxSlots.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+      this.listBoxSlots.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.listBoxSlots.FormattingEnabled = true;
       this.listBoxSlots.Location = new System.Drawing.Point(12, 40);
@@ -81,7 +76,7 @@
       // 
       // labelDriverId
       // 
-      this.labelDriverId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+      this.labelDriverId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.labelDriverId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.labelDriverId.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ASCOM.INDIGO.Properties.Settings.Default, "DriverId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));

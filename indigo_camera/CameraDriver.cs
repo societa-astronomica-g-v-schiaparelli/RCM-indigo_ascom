@@ -32,8 +32,7 @@ using System.Net;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace ASCOM.INDIGO
-{
+namespace ASCOM.INDIGO {
 
   [Guid("17b1bb89-ff1f-4381-8414-0205d33f9654")]
   [ClassInterface(ClassInterfaceType.None)]

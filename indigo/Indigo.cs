@@ -311,7 +311,7 @@ namespace INDIGO {
   }
 
   [DataContract]
-  public class Property: Indigo {
+  public class Property : Indigo {
 
     public enum Permissions {
       ReadOnly, WriteOnly, ReadWrite
@@ -675,7 +675,7 @@ namespace INDIGO {
     }
   }
 
-  public class Group: Indigo {
+  public class Group : Indigo {
     private string name;
     private List<Property> properties = new List<Property>();
     private Device parentDevice;
@@ -741,7 +741,7 @@ namespace INDIGO {
     }
   }
 
-  public class Device: Indigo {
+  public class Device : Indigo {
 
     public enum InterfaceMask {
       Mount = 1 << 0,
@@ -865,7 +865,7 @@ namespace INDIGO {
     }
   }
 
-  public class Server: Indigo {
+  public class Server : Indigo {
     private Client client;
     private Dictionary<string, Device> devices = new Dictionary<string, Device>();
 
@@ -1079,7 +1079,7 @@ namespace INDIGO {
     }
   }
 
-  public class Client: Indigo {
+  public class Client : Indigo {
     private List<Server> servers = new List<Server>();
 
     public readonly Mutex Mutex = new Mutex();

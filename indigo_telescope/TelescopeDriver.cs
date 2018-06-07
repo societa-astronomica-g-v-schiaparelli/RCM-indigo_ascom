@@ -28,139 +28,106 @@ using System;
 using System.Globalization;
 using System.Runtime.InteropServices;
 
-namespace ASCOM.INDIGO
-{
+namespace ASCOM.INDIGO {
   [Guid("520a4be5-9287-41e1-833f-d6cce75d9647")]
   [ClassInterface(ClassInterfaceType.None)]
-  public class Telescope : BaseDriver, ITelescopeV3
-  {
+  public class Telescope : BaseDriver, ITelescopeV3 {
     internal static string driverID = "ASCOM.INDIGO.Telescope";
     private static string driverName = "INDIGO Camera";
 
-    public Telescope()
-    {
+    public Telescope() {
       deviceInterface = Device.InterfaceMask.Mount;
     }
 
-    public string Description
-    {
-      get
-      {
+    public string Description {
+      get {
         return driverName + " (" + deviceName + ")";
       }
     }
 
-    public string DriverInfo
-    {
-      get
-      {
+    public string DriverInfo {
+      get {
         return Name + " driver, version " + DriverVersion;
       }
     }
 
-    public string DriverVersion
-    {
-      get
-      {
+    public string DriverVersion {
+      get {
         Version version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
         return String.Format(CultureInfo.InvariantCulture, "{0}.{1}", version.Major, version.Minor);
       }
     }
 
-    public short InterfaceVersion
-    {
-      get
-      {
+    public short InterfaceVersion {
+      get {
         return 2;
       }
     }
 
-    public string Name
-    {
-      get
-      {
+    public string Name {
+      get {
         return driverName;
       }
     }
 
-    public void AbortSlew()
-    {
+    public void AbortSlew() {
       throw new ASCOM.MethodNotImplementedException("AbortSlew");
     }
 
-    public AlignmentModes AlignmentMode
-    {
-      get
-      {
+    public AlignmentModes AlignmentMode {
+      get {
         throw new ASCOM.PropertyNotImplementedException("AlignmentMode", false);
       }
     }
 
-    public double Altitude
-    {
-      get
-      {
+    public double Altitude {
+      get {
         throw new ASCOM.PropertyNotImplementedException("Altitude", false);
       }
     }
 
-    public double ApertureArea
-    {
-      get
-      {
+    public double ApertureArea {
+      get {
         throw new ASCOM.PropertyNotImplementedException("ApertureArea", false);
       }
     }
 
-    public double ApertureDiameter
-    {
-      get
-      {
+    public double ApertureDiameter {
+      get {
         throw new ASCOM.PropertyNotImplementedException("ApertureDiameter", false);
       }
     }
 
-    public bool AtHome
-    {
-      get
-      {
+    public bool AtHome {
+      get {
         return false;
       }
     }
 
-    public bool AtPark
-    {
-      get
-      {
+    public bool AtPark {
+      get {
         return false;
       }
     }
 
-    public IAxisRates AxisRates(TelescopeAxes Axis)
-    {
+    public IAxisRates AxisRates(TelescopeAxes Axis) {
       return new AxisRates(Axis);
     }
 
-    public double Azimuth
-    {
-      get
-      {
+    public double Azimuth {
+      get {
         throw new ASCOM.PropertyNotImplementedException("Azimuth", false);
       }
     }
 
-    public bool CanFindHome
-    {
-      get
-      {
+    public bool CanFindHome {
+      get {
         return false;
       }
     }
 
-    public bool CanMoveAxis(TelescopeAxes Axis)
-    {
-      switch (Axis)
-      {
+    public bool CanMoveAxis(TelescopeAxes Axis) {
+      switch (Axis) {
         case TelescopeAxes.axisPrimary: return false;
         case TelescopeAxes.axisSecondary: return false;
         case TelescopeAxes.axisTertiary: return false;
@@ -168,501 +135,383 @@ namespace ASCOM.INDIGO
       }
     }
 
-    public bool CanPark
-    {
-      get
-      {
+    public bool CanPark {
+      get {
         return false;
       }
     }
 
-    public bool CanPulseGuide
-    {
-      get
-      {
+    public bool CanPulseGuide {
+      get {
         return false;
       }
     }
 
-    public bool CanSetDeclinationRate
-    {
-      get
-      {
+    public bool CanSetDeclinationRate {
+      get {
         return false;
       }
     }
 
-    public bool CanSetGuideRates
-    {
-      get
-      {
+    public bool CanSetGuideRates {
+      get {
         return false;
       }
     }
 
-    public bool CanSetPark
-    {
-      get
-      {
+    public bool CanSetPark {
+      get {
         return false;
       }
     }
 
-    public bool CanSetPierSide
-    {
-      get
-      {
+    public bool CanSetPierSide {
+      get {
         return false;
       }
     }
 
-    public bool CanSetRightAscensionRate
-    {
-      get
-      {
+    public bool CanSetRightAscensionRate {
+      get {
         return false;
       }
     }
 
-    public bool CanSetTracking
-    {
-      get
-      {
+    public bool CanSetTracking {
+      get {
         return false;
       }
     }
 
-    public bool CanSlew
-    {
-      get
-      {
+    public bool CanSlew {
+      get {
         return false;
       }
     }
 
-    public bool CanSlewAltAz
-    {
-      get
-      {
+    public bool CanSlewAltAz {
+      get {
         return false;
       }
     }
 
-    public bool CanSlewAltAzAsync
-    {
-      get
-      {
+    public bool CanSlewAltAzAsync {
+      get {
         return false;
       }
     }
 
-    public bool CanSlewAsync
-    {
-      get
-      {
+    public bool CanSlewAsync {
+      get {
         return false;
       }
     }
 
-    public bool CanSync
-    {
-      get
-      {
+    public bool CanSync {
+      get {
         return false;
       }
     }
 
-    public bool CanSyncAltAz
-    {
-      get
-      {
+    public bool CanSyncAltAz {
+      get {
         return false;
       }
     }
 
-    public bool CanUnpark
-    {
-      get
-      {
+    public bool CanUnpark {
+      get {
         return false;
       }
     }
 
-    public double Declination
-    {
-      get
-      {
+    public double Declination {
+      get {
         double declination = 0.0;
         return declination;
       }
     }
 
-    public double DeclinationRate
-    {
-      get
-      {
+    public double DeclinationRate {
+      get {
         double declination = 0.0;
         return declination;
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("DeclinationRate", true);
       }
     }
 
-    public PierSide DestinationSideOfPier(double RightAscension, double Declination)
-    {
+    public PierSide DestinationSideOfPier(double RightAscension, double Declination) {
       throw new ASCOM.PropertyNotImplementedException("DestinationSideOfPier", false);
     }
 
-    public bool DoesRefraction
-    {
-      get
-      {
+    public bool DoesRefraction {
+      get {
         throw new ASCOM.PropertyNotImplementedException("DoesRefraction", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("DoesRefraction", true);
       }
     }
 
-    public EquatorialCoordinateType EquatorialSystem
-    {
-      get
-      {
+    public EquatorialCoordinateType EquatorialSystem {
+      get {
         EquatorialCoordinateType equatorialSystem = EquatorialCoordinateType.equLocalTopocentric;
         return equatorialSystem;
       }
     }
 
-    public void FindHome()
-    {
+    public void FindHome() {
       throw new ASCOM.MethodNotImplementedException("FindHome");
     }
 
-    public double FocalLength
-    {
-      get
-      {
+    public double FocalLength {
+      get {
         throw new ASCOM.PropertyNotImplementedException("FocalLength", false);
       }
     }
 
-    public double GuideRateDeclination
-    {
-      get
-      {
+    public double GuideRateDeclination {
+      get {
         throw new ASCOM.PropertyNotImplementedException("GuideRateDeclination", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("GuideRateDeclination", true);
       }
     }
 
-    public double GuideRateRightAscension
-    {
-      get
-      {
+    public double GuideRateRightAscension {
+      get {
         throw new ASCOM.PropertyNotImplementedException("GuideRateRightAscension", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("GuideRateRightAscension", true);
       }
     }
 
-    public bool IsPulseGuiding
-    {
-      get
-      {
+    public bool IsPulseGuiding {
+      get {
         throw new ASCOM.PropertyNotImplementedException("IsPulseGuiding", false);
       }
     }
 
-    public void MoveAxis(TelescopeAxes Axis, double Rate)
-    {
+    public void MoveAxis(TelescopeAxes Axis, double Rate) {
       throw new ASCOM.MethodNotImplementedException("MoveAxis");
     }
 
-    public void Park()
-    {
+    public void Park() {
       throw new ASCOM.MethodNotImplementedException("Park");
     }
 
-    public void PulseGuide(GuideDirections Direction, int Duration)
-    {
+    public void PulseGuide(GuideDirections Direction, int Duration) {
       throw new ASCOM.MethodNotImplementedException("PulseGuide");
     }
 
-    public double RightAscension
-    {
-      get
-      {
+    public double RightAscension {
+      get {
         double rightAscension = 0.0;
         return rightAscension;
       }
     }
 
-    public double RightAscensionRate
-    {
-      get
-      {
+    public double RightAscensionRate {
+      get {
         double rightAscensionRate = 0.0;
         return rightAscensionRate;
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("RightAscensionRate", true);
       }
     }
 
-    public void SetPark()
-    {
+    public void SetPark() {
       throw new ASCOM.MethodNotImplementedException("SetPark");
     }
 
-    public PierSide SideOfPier
-    {
-      get
-      {
+    public PierSide SideOfPier {
+      get {
         throw new ASCOM.PropertyNotImplementedException("SideOfPier", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("SideOfPier", true);
       }
     }
 
-    public double SiderealTime
-    {
-      get
-      {
+    public double SiderealTime {
+      get {
         // get greenwich sidereal time: https://en.wikipedia.org/wiki/Sidereal_time
         double siderealTime = (18.697374558 + 24.065709824419081 * (utilities.DateUTCToJulian(DateTime.UtcNow) - 2451545.0));
         return siderealTime;
       }
     }
 
-    public double SiteElevation
-    {
-      get
-      {
+    public double SiteElevation {
+      get {
         throw new ASCOM.PropertyNotImplementedException("SiteElevation", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("SiteElevation", true);
       }
     }
 
-    public double SiteLatitude
-    {
-      get
-      {
+    public double SiteLatitude {
+      get {
         throw new ASCOM.PropertyNotImplementedException("SiteLatitude", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("SiteLatitude", true);
       }
     }
 
-    public double SiteLongitude
-    {
-      get
-      {
+    public double SiteLongitude {
+      get {
         throw new ASCOM.PropertyNotImplementedException("SiteLongitude", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("SiteLongitude", true);
       }
     }
 
-    public short SlewSettleTime
-    {
-      get
-      {
+    public short SlewSettleTime {
+      get {
         throw new ASCOM.PropertyNotImplementedException("SlewSettleTime", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("SlewSettleTime", true);
       }
     }
 
-    public void SlewToAltAz(double Azimuth, double Altitude)
-    {
+    public void SlewToAltAz(double Azimuth, double Altitude) {
       throw new ASCOM.MethodNotImplementedException("SlewToAltAz");
     }
 
-    public void SlewToAltAzAsync(double Azimuth, double Altitude)
-    {
+    public void SlewToAltAzAsync(double Azimuth, double Altitude) {
       throw new ASCOM.MethodNotImplementedException("SlewToAltAzAsync");
     }
 
-    public void SlewToCoordinates(double RightAscension, double Declination)
-    {
+    public void SlewToCoordinates(double RightAscension, double Declination) {
       throw new ASCOM.MethodNotImplementedException("SlewToCoordinates");
     }
 
-    public void SlewToCoordinatesAsync(double RightAscension, double Declination)
-    {
+    public void SlewToCoordinatesAsync(double RightAscension, double Declination) {
       throw new ASCOM.MethodNotImplementedException("SlewToCoordinatesAsync");
     }
 
-    public void SlewToTarget()
-    {
+    public void SlewToTarget() {
       throw new ASCOM.MethodNotImplementedException("SlewToTarget");
     }
 
-    public void SlewToTargetAsync()
-    {
+    public void SlewToTargetAsync() {
       throw new ASCOM.MethodNotImplementedException("SlewToTargetAsync");
     }
 
-    public bool Slewing
-    {
-      get
-      {
+    public bool Slewing {
+      get {
         throw new ASCOM.PropertyNotImplementedException("Slewing", false);
       }
     }
 
-    public void SyncToAltAz(double Azimuth, double Altitude)
-    {
+    public void SyncToAltAz(double Azimuth, double Altitude) {
       throw new ASCOM.MethodNotImplementedException("SyncToAltAz");
     }
 
-    public void SyncToCoordinates(double RightAscension, double Declination)
-    {
+    public void SyncToCoordinates(double RightAscension, double Declination) {
       throw new ASCOM.MethodNotImplementedException("SyncToCoordinates");
     }
 
-    public void SyncToTarget()
-    {
+    public void SyncToTarget() {
       throw new ASCOM.MethodNotImplementedException("SyncToTarget");
     }
 
-    public double TargetDeclination
-    {
-      get
-      {
+    public double TargetDeclination {
+      get {
         throw new ASCOM.PropertyNotImplementedException("TargetDeclination", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("TargetDeclination", true);
       }
     }
 
-    public double TargetRightAscension
-    {
-      get
-      {
+    public double TargetRightAscension {
+      get {
         throw new ASCOM.PropertyNotImplementedException("TargetRightAscension", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("TargetRightAscension", true);
       }
     }
 
-    public bool Tracking
-    {
-      get
-      {
+    public bool Tracking {
+      get {
         bool tracking = true;
         return tracking;
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("Tracking", true);
       }
     }
 
-    public DriveRates TrackingRate
-    {
-      get
-      {
+    public DriveRates TrackingRate {
+      get {
         throw new ASCOM.PropertyNotImplementedException("TrackingRate", false);
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("TrackingRate", true);
       }
     }
 
-    public ITrackingRates TrackingRates
-    {
-      get
-      {
+    public ITrackingRates TrackingRates {
+      get {
         ITrackingRates trackingRates = new TrackingRates();
         return trackingRates;
       }
     }
 
-    public DateTime UTCDate
-    {
-      get
-      {
+    public DateTime UTCDate {
+      get {
         DateTime utcDate = DateTime.UtcNow;
         return utcDate;
       }
-      set
-      {
+      set {
         throw new ASCOM.PropertyNotImplementedException("UTCDate", true);
       }
     }
 
-    public void Unpark()
-    {
+    public void Unpark() {
       throw new ASCOM.MethodNotImplementedException("Unpark");
     }
 
-    private static void RegUnregASCOM(bool bRegister)
-    {
-      using (var P = new ASCOM.Utilities.Profile())
-      {
+    private static void RegUnregASCOM(bool bRegister) {
+      using (var P = new ASCOM.Utilities.Profile()) {
         P.DeviceType = "Telescope";
-        if (bRegister)
-        {
+        if (bRegister) {
           P.Register(driverID, driverName);
-        }
-        else
-        {
+        } else {
           P.Unregister(driverID);
         }
       }
     }
 
     [ComRegisterFunction]
-    public static void RegisterASCOM(Type t)
-    {
+    public static void RegisterASCOM(Type t) {
       RegUnregASCOM(true);
     }
 
     [ComUnregisterFunction]
-    public static void UnregisterASCOM(Type t)
-    {
+    public static void UnregisterASCOM(Type t) {
       RegUnregASCOM(false);
     }
 
-    override protected void ReadProfile()
-    {
-      using (Profile driverProfile = new Profile())
-      {
+    override protected void ReadProfile() {
+      using (Profile driverProfile = new Profile()) {
         driverProfile.DeviceType = "Telescope";
         deviceName = driverProfile.GetValue(driverID, deviceNameProfileName, string.Empty, string.Empty);
       }
     }
 
-    override protected void WriteProfile()
-    {
-      using (Profile driverProfile = new Profile())
-      {
+    override protected void WriteProfile() {
+      using (Profile driverProfile = new Profile()) {
         driverProfile.DeviceType = "Telescope";
         driverProfile.WriteValue(driverID, deviceNameProfileName, deviceName);
       }
