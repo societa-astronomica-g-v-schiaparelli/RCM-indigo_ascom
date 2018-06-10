@@ -103,8 +103,8 @@ namespace ASCOM.INDIGO {
       }
     }
 
-    override protected void propertyChanged(Property property) {
-      base.propertyChanged(property);
+    override protected void PropertyChanged(Property property) {
+      base.PropertyChanged(property);
       if (property.DeviceName == deviceName) {
         if (property.Name == "WHEEL_SLOT") {
           NumberItem slot = (NumberItem)property.GetItem("SLOT");

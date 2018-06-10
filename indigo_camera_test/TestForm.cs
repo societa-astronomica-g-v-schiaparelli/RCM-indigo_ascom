@@ -50,7 +50,7 @@ namespace ASCOM.INDIGO {
     private void buttonConnect_Click(object sender, EventArgs e) {
       if (IsConnected) {
         driver.Connected = false;
-          driver.Dispose();
+        driver.Dispose();
         driver = null;
       } else {
         driver = new ASCOM.DriverAccess.Camera(Properties.Settings.Default.DriverId);

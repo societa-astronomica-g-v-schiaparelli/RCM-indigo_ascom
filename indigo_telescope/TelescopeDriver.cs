@@ -33,7 +33,7 @@ namespace ASCOM.INDIGO {
   [ClassInterface(ClassInterfaceType.None)]
   public class Telescope : BaseDriver, ITelescopeV3 {
     internal static string driverID = "ASCOM.INDIGO.Telescope";
-    private static string driverName = "INDIGO Camera";
+    private static readonly string driverName = "INDIGO Telescope";
 
     public Telescope() {
       deviceInterface = Device.InterfaceMask.Mount;
@@ -70,6 +70,34 @@ namespace ASCOM.INDIGO {
       }
     }
 
+    private EquatorialCoordinateType equatorialSystem = EquatorialCoordinateType.equLocalTopocentric;
+    private double rightAscension = 0.0, declination = 0.0;
+    private double altitude = 0.0, azimuth = 0.0;
+    private bool hasAltAz = false, canSetAltAz = false;
+
+    override protected void PropertyAdded(Property property) {
+      base.PropertyAdded(property);
+      if (property.DeviceName == deviceName) {
+        if (property.Name == "MOUNT_HORIZONTAL_COORDINATES") {
+          hasAltAz = true;
+          canSetAltAz = property.Permission == Property.Permissions.ReadWrite;
+        }
+      }
+    }
+
+    override protected void PropertyChanged(Property property) {
+      base.PropertyChanged(property);
+      if (property.DeviceName == deviceName) {
+        if (property.Name == "MOUNT_EQUATORIAL_COORDINATES") {
+          rightAscension = ((NumberItem)property.GetItem("RA")).Value;
+          declination = ((NumberItem)property.GetItem("DEC")).Value;
+        } else if (property.Name == "MOUNT_HORIZONTAL_COORDINATES") {
+          altitude = ((NumberItem)property.GetItem("ALT")).Value;
+          azimuth = ((NumberItem)property.GetItem("AZ")).Value;
+        }
+      }
+    }
+
     public void AbortSlew() {
       throw new ASCOM.MethodNotImplementedException("AbortSlew");
     }
@@ -82,6 +110,8 @@ namespace ASCOM.INDIGO {
 
     public double Altitude {
       get {
+        if (hasAltAz)
+          return altitude;
         throw new ASCOM.PropertyNotImplementedException("Altitude", false);
       }
     }
@@ -116,6 +146,8 @@ namespace ASCOM.INDIGO {
 
     public double Azimuth {
       get {
+        if (hasAltAz)
+          return azimuth;
         throw new ASCOM.PropertyNotImplementedException("Azimuth", false);
       }
     }
@@ -185,37 +217,37 @@ namespace ASCOM.INDIGO {
 
     public bool CanSlew {
       get {
-        return false;
+        return true;
       }
     }
 
     public bool CanSlewAltAz {
       get {
-        return false;
+        return canSetAltAz;
       }
     }
 
     public bool CanSlewAltAzAsync {
       get {
-        return false;
+        return canSetAltAz;
       }
     }
 
     public bool CanSlewAsync {
       get {
-        return false;
+        return true;
       }
     }
 
     public bool CanSync {
       get {
-        return false;
+        return true;
       }
     }
 
     public bool CanSyncAltAz {
       get {
-        return false;
+        return canSetAltAz;
       }
     }
 
@@ -227,15 +259,13 @@ namespace ASCOM.INDIGO {
 
     public double Declination {
       get {
-        double declination = 0.0;
         return declination;
       }
     }
 
     public double DeclinationRate {
       get {
-        double declination = 0.0;
-        return declination;
+        return 0.0;
       }
       set {
         throw new ASCOM.PropertyNotImplementedException("DeclinationRate", true);
@@ -257,7 +287,6 @@ namespace ASCOM.INDIGO {
 
     public EquatorialCoordinateType EquatorialSystem {
       get {
-        EquatorialCoordinateType equatorialSystem = EquatorialCoordinateType.equLocalTopocentric;
         return equatorialSystem;
       }
     }
@@ -310,15 +339,13 @@ namespace ASCOM.INDIGO {
 
     public double RightAscension {
       get {
-        double rightAscension = 0.0;
         return rightAscension;
       }
     }
 
     public double RightAscensionRate {
       get {
-        double rightAscensionRate = 0.0;
-        return rightAscensionRate;
+        return 0.0;
       }
       set {
         throw new ASCOM.PropertyNotImplementedException("RightAscensionRate", true);
@@ -341,8 +368,7 @@ namespace ASCOM.INDIGO {
     public double SiderealTime {
       get {
         // get greenwich sidereal time: https://en.wikipedia.org/wiki/Sidereal_time
-        double siderealTime = (18.697374558 + 24.065709824419081 * (utilities.DateUTCToJulian(DateTime.UtcNow) - 2451545.0));
-        return siderealTime;
+        return (18.697374558 + 24.065709824419081 * (utilities.DateUTCToJulian(DateTime.UtcNow) - 2451545.0));
       }
     }
 

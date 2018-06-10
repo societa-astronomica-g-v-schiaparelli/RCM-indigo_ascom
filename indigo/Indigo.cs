@@ -469,7 +469,7 @@ namespace INDIGO {
         Item cachedItem = Items.FirstOrDefault(x => x.Name == item.Name);
         if (cachedItem != null) {
           cachedItem.Update(item);
-          break;
+//          break;
         }
       }
     }

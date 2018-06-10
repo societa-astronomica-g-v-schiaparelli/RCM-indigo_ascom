@@ -46,11 +46,11 @@ namespace ASCOM.INDIGO {
 
     private SwitchProperty configProperty, connectionProperty;
 
-    virtual protected void propertyChanged(Property property) {
+    virtual protected void PropertyChanged(Property property) {
       //Log("Property \"" + property.DeviceName + "\" \"" + property.Name + "\"");
     }
 
-    virtual protected void propertyAdded(Property property) {
+    protected virtual void PropertyAdded(Property property) {
       if (property.DeviceName == deviceName) {
         Log("def" + property);
         if (property.Name == "CONFIG") {
@@ -61,10 +61,10 @@ namespace ASCOM.INDIGO {
           waitFor.Hide(ref waitingForConnectionProperty);
         }
       }
-      propertyChanged(property);
+      PropertyChanged(property);
     }
 
-    virtual protected void propertyUpdated(Property property) {
+    protected virtual void PropertyUpdated(Property property) {
       if (property.DeviceName == deviceName) {
         Log("set" + property);
         if (property == connectionProperty) {
@@ -77,10 +77,10 @@ namespace ASCOM.INDIGO {
           }
         }
       }
-      propertyChanged(property);
+      PropertyChanged(property);
     }
 
-    private void propertyRemoved(Property property) {
+    private void PropertyRemoved(Property property) {
       Log("del" + property);
       if (property.DeviceName == deviceName && property.Name == "CONFIG") {
         connectionProperty = null;
@@ -89,20 +89,20 @@ namespace ASCOM.INDIGO {
       }
     }
 
-    private void deviceAdded(Device device) {
-      device.PropertyAdded += propertyAdded;
-      device.PropertyUpdated += propertyUpdated;
-      device.PropertyRemoved += propertyRemoved;
+    private void DeviceAdded(Device device) {
+      device.PropertyAdded += PropertyAdded;
+      device.PropertyUpdated += PropertyUpdated;
+      device.PropertyRemoved += PropertyRemoved;
       if (device.Name == deviceName) {
         this.device = device;
         waitFor.Hide(ref waitingForDevice);
         Log("Device \"" + device.Name + "\" found on \"" + device.Server.Name + "\"");
       }
       foreach (Property property in device.Properties)
-        propertyAdded(property);
+        PropertyAdded(property);
     }
 
-    private void deviceRemoved(Device device) {
+    private void DeviceRemoved(Device device) {
       if (this.device == device) {
         this.device = null;
         connectedState = false;
@@ -110,14 +110,14 @@ namespace ASCOM.INDIGO {
       }
     }
 
-    private void serverAdded(Server server) {
-      server.DeviceAdded += deviceAdded;
-      server.DeviceRemoved += deviceRemoved;
+    private void ServerAdded(Server server) {
+      server.DeviceAdded += DeviceAdded;
+      server.DeviceRemoved += DeviceRemoved;
       foreach (Device device in server.Devices)
-        deviceAdded(device);
+        DeviceAdded(device);
     }
 
-    private void serverRemoved(Server server) {
+    private void ServerRemoved(Server server) {
     }
 
     protected BaseDriver() {
@@ -125,25 +125,25 @@ namespace ASCOM.INDIGO {
         client = new Client();
       client.Mutex.WaitOne();
       foreach (Server server in client.Servers)
-        serverAdded(server);
+        ServerAdded(server);
       client.Mutex.ReleaseMutex();
-      client.ServerAdded += serverAdded;
-      client.ServerRemoved += serverRemoved;
+      client.ServerAdded += ServerAdded;
+      client.ServerRemoved += ServerRemoved;
       connectedState = false;
       utilities = new Util();
       ReadProfile();
     }
 
     public void Dispose() {
-      client.ServerAdded -= serverAdded;
-      client.ServerRemoved -= serverRemoved;
+      client.ServerAdded -= ServerAdded;
+      client.ServerRemoved -= ServerRemoved;
       foreach (Server server in client.Servers) {
-        server.DeviceAdded -= deviceAdded;
-        server.DeviceRemoved -= deviceRemoved;
+        server.DeviceAdded -= DeviceAdded;
+        server.DeviceRemoved -= DeviceRemoved;
         foreach (Device device in server.Devices) {
-          device.PropertyAdded -= propertyAdded;
-          device.PropertyUpdated -= propertyUpdated;
-          device.PropertyRemoved -= propertyRemoved;
+          device.PropertyAdded -= PropertyAdded;
+          device.PropertyUpdated -= PropertyUpdated;
+          device.PropertyRemoved -= PropertyRemoved;
         }
       }
       utilities.Dispose();
@@ -202,7 +202,7 @@ namespace ASCOM.INDIGO {
             if (!IsConnected) {
               client.Mutex.WaitOne();
               foreach (Property property in device.Properties)
-                propertyAdded(property);
+                PropertyAdded(property);
               client.Mutex.ReleaseMutex();
               connectionProperty.SetSingleValue("CONNECTED", true);
               waitFor.Wait(out waitingForConnected, "Connecting to \"" + deviceName + "\"", this);

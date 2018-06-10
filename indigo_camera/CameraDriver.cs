@@ -94,7 +94,7 @@ namespace ASCOM.INDIGO {
     private int[,] monoImageArray;
     private int[,,] rgbImageArray;
 
-    override protected void propertyAdded(Property property) {
+    override protected void PropertyAdded(Property property) {
       if (property.DeviceName == deviceName) {
         if (property.Name == "CCD_ABORT_EXPOSURE") {
           canAbort = true;
@@ -120,13 +120,13 @@ namespace ASCOM.INDIGO {
           hasCoolerPower = true;
           coolerPower = ((NumberItem)property.GetItem("POWER")).Value;
         } else {
-          base.propertyAdded(property);
+          base.PropertyAdded(property);
         }
       }
     }
 
-    override protected void propertyUpdated(Property property) {
-      base.propertyUpdated(property);
+    override protected void PropertyUpdated(Property property) {
+      base.PropertyUpdated(property);
       if (property.DeviceName == deviceName) {
         if (property.Name == "CCD_IMAGE" && property.State == Property.States.Ok) {
           BLOBItem blobItem = ((BLOBItem)property.GetItem("IMAGE"));
@@ -182,8 +182,8 @@ namespace ASCOM.INDIGO {
       }
     }
 
-    override protected void propertyChanged(Property property) {
-      base.propertyChanged(property);
+    override protected void PropertyChanged(Property property) {
+      base.PropertyChanged(property);
       if (property.DeviceName == deviceName) {
         if (property.Name == "CCD_INFO") {
           foreach (Item item in property.Items) {
