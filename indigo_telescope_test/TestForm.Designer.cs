@@ -36,6 +36,8 @@
       this.label2 = new System.Windows.Forms.Label();
       this.buttonSync = new System.Windows.Forms.Button();
       this.buttonSlew = new System.Windows.Forms.Button();
+      this.textDecCurrent = new System.Windows.Forms.TextBox();
+      this.textRACurrent = new System.Windows.Forms.TextBox();
       this.SuspendLayout();
       // 
       // buttonChoose
@@ -120,24 +122,26 @@
       // 
       // textAz
       // 
-      this.textAz.Location = new System.Drawing.Point(333, 194);
+      this.textAz.Location = new System.Drawing.Point(333, 224);
       this.textAz.Margin = new System.Windows.Forms.Padding(6);
       this.textAz.Name = "textAz";
+      this.textAz.ReadOnly = true;
       this.textAz.Size = new System.Drawing.Size(150, 31);
       this.textAz.TabIndex = 22;
       // 
       // textAlt
       // 
-      this.textAlt.Location = new System.Drawing.Point(171, 194);
+      this.textAlt.Location = new System.Drawing.Point(171, 224);
       this.textAlt.Margin = new System.Windows.Forms.Padding(6);
       this.textAlt.Name = "textAlt";
+      this.textAlt.ReadOnly = true;
       this.textAlt.Size = new System.Drawing.Size(150, 31);
       this.textAlt.TabIndex = 21;
       // 
       // label2
       // 
       this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(15, 197);
+      this.label2.Location = new System.Drawing.Point(15, 227);
       this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
       this.label2.Name = "label2";
       this.label2.Size = new System.Drawing.Size(74, 25);
@@ -153,6 +157,7 @@
       this.buttonSync.TabIndex = 23;
       this.buttonSync.Text = "Sync";
       this.buttonSync.UseVisualStyleBackColor = true;
+      this.buttonSync.Click += new System.EventHandler(this.buttonSync_Click);
       // 
       // buttonSlew
       // 
@@ -163,12 +168,33 @@
       this.buttonSlew.TabIndex = 24;
       this.buttonSlew.Text = "Slew";
       this.buttonSlew.UseVisualStyleBackColor = true;
+      this.buttonSlew.Click += new System.EventHandler(this.buttonSlew_Click);
+      // 
+      // textDecCurrent
+      // 
+      this.textDecCurrent.Location = new System.Drawing.Point(333, 181);
+      this.textDecCurrent.Margin = new System.Windows.Forms.Padding(6);
+      this.textDecCurrent.Name = "textDecCurrent";
+      this.textDecCurrent.ReadOnly = true;
+      this.textDecCurrent.Size = new System.Drawing.Size(150, 31);
+      this.textDecCurrent.TabIndex = 26;
+      // 
+      // textRACurrent
+      // 
+      this.textRACurrent.Location = new System.Drawing.Point(171, 181);
+      this.textRACurrent.Margin = new System.Windows.Forms.Padding(6);
+      this.textRACurrent.Name = "textRACurrent";
+      this.textRACurrent.ReadOnly = true;
+      this.textRACurrent.Size = new System.Drawing.Size(150, 31);
+      this.textRACurrent.TabIndex = 25;
       // 
       // TestForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(818, 504);
+      this.Controls.Add(this.textDecCurrent);
+      this.Controls.Add(this.textRACurrent);
       this.Controls.Add(this.buttonSlew);
       this.Controls.Add(this.buttonSync);
       this.Controls.Add(this.textAz);
@@ -206,6 +232,8 @@
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Button buttonSync;
     private System.Windows.Forms.Button buttonSlew;
+    private System.Windows.Forms.TextBox textDecCurrent;
+    private System.Windows.Forms.TextBox textRACurrent;
   }
 }
 

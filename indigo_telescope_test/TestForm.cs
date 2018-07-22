@@ -19,8 +19,8 @@ namespace ASCOM.INDIGO {
 
     private void timerEvent(object source, ElapsedEventArgs e) {
       BeginInvoke(new MethodInvoker(() => {
-        textRA.Text = driver.RightAscension.ToString();
-        textDec.Text = driver.Declination.ToString();
+        textRACurrent.Text = driver.RightAscension.ToString();
+        textDecCurrent.Text = driver.Declination.ToString();
         try {
           textAlt.Text = driver.Altitude.ToString();
           textAz.Text = driver.Azimuth.ToString();
@@ -61,8 +61,8 @@ namespace ASCOM.INDIGO {
       buttonConnect.Text = IsConnected ? "Disconnect" : "Connect";
       if (IsConnected) {
         labelDescription.Text = driver.Description;
-        textRA.Text = driver.RightAscension.ToString();
-        textDec.Text = driver.Declination.ToString();
+        textRA.Text = textRACurrent.Text = driver.RightAscension.ToString();
+        textDec.Text = textDecCurrent.Text = driver.Declination.ToString();
         try {
           textAlt.Text = driver.Altitude.ToString();
           textAz.Text = driver.Azimuth.ToString();
@@ -77,6 +77,14 @@ namespace ASCOM.INDIGO {
       get {
         return ((this.driver != null) && (driver.Connected == true));
       }
+    }
+
+    private void buttonSlew_Click(object sender, EventArgs e) {
+      driver.SlewToCoordinatesAsync(Double.Parse(textRA.Text), Double.Parse(textDec.Text));
+    }
+
+    private void buttonSync_Click(object sender, EventArgs e) {
+      driver.SyncToCoordinates(Double.Parse(textRA.Text), Double.Parse(textDec.Text));
     }
   }
 }

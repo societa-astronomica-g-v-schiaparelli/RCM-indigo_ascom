@@ -90,11 +90,11 @@ namespace ASCOM.INDIGO {
         case TelescopeAxes.axisPrimary:
           // TODO Initialize this array with any Primary axis rates that your driver may provide
           // Example: m_Rates = new Rate[] { new Rate(10.5, 30.2), new Rate(54.0, 43.6) }
-          this.rates = new Rate[0];
+          this.rates = new Rate[] { new Rate(1.0, 4.0) };
           break;
         case TelescopeAxes.axisSecondary:
           // TODO Initialize this array with any Secondary axis rates that your driver may provide
-          this.rates = new Rate[0];
+          this.rates = new Rate[] { new Rate(1.0, 4.0) };
           break;
         case TelescopeAxes.axisTertiary:
           // TODO Initialize this array with any Tertiary axis rates that your driver may provide
@@ -159,7 +159,7 @@ namespace ASCOM.INDIGO {
       // the tracking rates supported by your telescope. The one value
       // (tracking rate) that MUST be supported is driveSidereal!
       //
-      this.trackingRates = new[] { DriveRates.driveSidereal };
+      this.trackingRates = new[] { DriveRates.driveSidereal, DriveRates.driveLunar, DriveRates.driveSolar };
       // TODO Initialize this array with any additional tracking rates that your driver may provide
     }
 
