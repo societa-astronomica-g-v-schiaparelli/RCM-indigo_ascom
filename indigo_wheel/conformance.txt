@@ -1,0 +1,71 @@
+﻿ 
+ConformanceCheck ASCOM Device Conformance Checker Version 6.2.59.0, Build time: 1/9/2017 8:44:32 AM
+ConformanceCheck Running on: ASCOM Platform 6.3 6.3.0.2831
+ 
+ConformanceCheck Driver ProgID: ASCOM.INDIGO.FilterWheel
+ 
+Error handling 
+Error number for "Not Implemented" is: 80040400
+Error number for "Invalid Value 1" is: 80040404
+Error number for "Invalid Value 3" is: 80040405
+Error number for "Value Not Set 1" is: 80040402
+Error number for "Value Not Set 2" is: 80040403
+Error messages will not be interpreted to infer state.
+ 
+23:18:42.008 Driver Access Checks              OK       
+23:18:42.724 AccessChecks                      OK       Successfully created driver using late binding
+23:18:42.882 AccessChecks                      OK       Successfully connected using late binding
+23:18:42.988 AccessChecks                      INFO     The driver is a .NET object
+23:18:43.033 AccessChecks                      INFO     The AssemblyQualifiedName is: ASCOM.INDIGO.FilterWheel, ASCOM.INDIGO.FilterWheel, Version=6.3.0.3, Culture
+23:18:43.106 AccessChecks                      INFO     The driver implements interface: ASCOM.DeviceInterface.IFilterWheelV2
+23:18:43.847 AccessChecks                      INFO     Device does not expose interface IFilterWheel
+23:18:44.078 AccessChecks                      INFO     Device exposes interface IFilterWheelV2
+23:18:44.239 AccessChecks                      OK       Successfully created driver using driver access toolkit
+23:18:44.484 AccessChecks                      OK       Successfully connected using driver access toolkit
+ 
+Conform is using ASCOM.DriverAccess.FilterWheel to get a FilterWheel object
+23:18:44.709 ConformanceCheck                  OK       Driver instance created successfully
+23:18:45.102 ConformanceCheck                  OK       Connected OK
+ 
+Common Driver Methods 
+23:18:45.275 InterfaceVersion                  OK       2
+23:18:45.393 Connected                         OK       True
+23:18:45.457 Description                       OK       INDIGO FilterWheel (CCD Imager Simulator (wheel))
+23:18:45.526 DriverInfo                        OK       INDIGO FilterWheel driver, version 6.3
+23:18:45.617 DriverVersion                     OK       6.3
+23:18:45.705 Name                              OK       INDIGO FilterWheel
+23:18:45.806 CommandString                     INFO     Conform cannot test the CommandString method
+23:18:45.872 CommandBlind                      INFO     Conform cannot test the CommandBlind method
+23:18:45.945 CommandBool                       INFO     Conform cannot test the CommandBool method
+23:18:45.985 Action                            INFO     Conform cannot test the Action method
+23:18:46.027 SupportedActions                  OK       Driver returned an empty action list
+ 
+Pre-run Checks 
+23:18:47.560 Pre-run Check                     OK       Filterwheel is stationary, ready to start tests
+ 
+Properties 
+23:18:47.727 FocusOffsets Get                  OK       Found 5 filter offset values
+23:18:47.777 FocusOffsets Get                  INFO     Filter 0 Offset: 0
+23:18:47.876 FocusOffsets Get                  INFO     Filter 1 Offset: 0
+23:18:47.996 FocusOffsets Get                  INFO     Filter 2 Offset: 0
+23:18:48.096 FocusOffsets Get                  INFO     Filter 3 Offset: 0
+23:18:48.202 FocusOffsets Get                  INFO     Filter 4 Offset: 0
+23:18:48.297 Names Get                         OK       Found 5 filter names
+23:18:48.346 Names Get                         INFO     Filter 0 Name: Filter #1
+23:18:48.395 Names Get                         INFO     Filter 1 Name: Filter #2
+23:18:48.488 Names Get                         INFO     Filter 2 Name: Filter #3
+23:18:48.552 Names Get                         INFO     Filter 3 Name: Filter #4
+23:18:48.651 Names Get                         INFO     Filter 4 Name: Filter #5
+23:18:48.730 Names Get                         OK       Number of filter offsets and number of names are the same: 5
+23:18:48.828 Position Get                      OK       Currently at position: 0
+23:18:49.048 Position Set                      OK       Reached position: 0 in: 0.1 seconds
+23:18:50.722 Position Set                      OK       Reached position: 1 in: 0.6 seconds
+23:18:52.381 Position Set                      OK       Reached position: 2 in: 0.6 seconds
+23:18:54.034 Position Set                      OK       Reached position: 3 in: 0.6 seconds
+23:18:55.719 Position Set                      OK       Reached position: 4 in: 0.6 seconds
+23:18:56.763 Position Set                      OK       Correctly rejected bad position: -1
+23:18:56.781 Position Set                      OK       Correctly rejected bad position: 5
+ 
+Conformance test complete 
+ 
+No errors, warnings or issues found: your driver passes ASCOM validation!! 

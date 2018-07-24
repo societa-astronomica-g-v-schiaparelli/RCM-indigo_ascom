@@ -5,11 +5,6 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_wheel", "indigo_wheel\indigo_wheel.csproj", "{64308775-BD4A-469C-BCAB-3ED830B811AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_wheel_test", "indigo_wheel_test\indigo_wheel_test.csproj", "{8E8D406C-1838-4914-867D-AB602D0EAF3E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{64308775-BD4A-469C-BCAB-3ED830B811AF} = {64308775-BD4A-469C-BCAB-3ED830B811AF}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo", "indigo\indigo.csproj", "{36648BAD-B851-4049-BA6C-A017213F6E34}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_test", "indigo_test\indigo_test.csproj", "{68E4E059-7EF7-43EF-95CD-BD53E2EE040B}"
@@ -18,14 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_driver", "indigo_dri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_camera", "indigo_camera\indigo_camera.csproj", "{93BD8641-60BD-48C4-AC6E-284ED81505BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_camera_test", "indigo_camera_test\indigo_camera_test.csproj", "{716249C9-5431-4E4C-A638-3E2FE0014732}"
-	ProjectSection(ProjectDependencies) = postProject
-		{93BD8641-60BD-48C4-AC6E-284ED81505BF} = {93BD8641-60BD-48C4-AC6E-284ED81505BF}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_mount", "indigo_mount\indigo_mount.csproj", "{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_mount_test", "indigo_mount_test\indigo_mount_test.csproj", "{86267DFE-3981-4655-AECE-2C60718BEAEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +25,6 @@ Global
 		{64308775-BD4A-469C-BCAB-3ED830B811AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64308775-BD4A-469C-BCAB-3ED830B811AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64308775-BD4A-469C-BCAB-3ED830B811AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E8D406C-1838-4914-867D-AB602D0EAF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E8D406C-1838-4914-867D-AB602D0EAF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E8D406C-1838-4914-867D-AB602D0EAF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E8D406C-1838-4914-867D-AB602D0EAF3E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36648BAD-B851-4049-BA6C-A017213F6E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36648BAD-B851-4049-BA6C-A017213F6E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36648BAD-B851-4049-BA6C-A017213F6E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,18 +41,10 @@ Global
 		{93BD8641-60BD-48C4-AC6E-284ED81505BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93BD8641-60BD-48C4-AC6E-284ED81505BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93BD8641-60BD-48C4-AC6E-284ED81505BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{716249C9-5431-4E4C-A638-3E2FE0014732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{716249C9-5431-4E4C-A638-3E2FE0014732}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{716249C9-5431-4E4C-A638-3E2FE0014732}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{716249C9-5431-4E4C-A638-3E2FE0014732}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86267DFE-3981-4655-AECE-2C60718BEAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86267DFE-3981-4655-AECE-2C60718BEAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86267DFE-3981-4655-AECE-2C60718BEAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86267DFE-3981-4655-AECE-2C60718BEAEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

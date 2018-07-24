@@ -1,0 +1,178 @@
+﻿ 
+ConformanceCheck ASCOM Device Conformance Checker Version 6.2.59.0, Build time: 1/9/2017 8:44:32 AM
+ConformanceCheck Running on: ASCOM Platform 6.3 6.3.0.2831
+ 
+ConformanceCheck Driver ProgID: ASCOM.INDIGO.Camera
+ 
+Error handling 
+Error number for "Not Implemented" is: 80040400
+Error number for "Invalid Value 1" is: 80040405
+Error number for "Value Not Set 1" is: 80040402
+Error number for "Value Not Set 2" is: 80040403
+Error messages will not be interpreted to infer state.
+ 
+23:16:43.664 Driver Access Checks              OK       
+23:16:44.381 AccessChecks                      OK       Successfully created driver using late binding
+23:16:44.722 AccessChecks                      OK       Successfully connected using late binding
+23:16:44.808 AccessChecks                      INFO     The driver is a .NET object
+23:16:44.830 AccessChecks                      INFO     The AssemblyQualifiedName is: ASCOM.INDIGO.Camera, ASCOM.INDIGO.Camera, Version=6.3.0.3, Culture=neutral, 
+23:16:44.866 AccessChecks                      INFO     The driver implements interface: ASCOM.DeviceInterface.ICameraV2
+23:16:45.597 AccessChecks                      INFO     Driver does not expose interface ICamera
+23:16:45.808 AccessChecks                      INFO     Device exposes interface ICameraV2
+23:16:46.027 AccessChecks                      OK       Successfully created driver using driver access toolkit
+23:16:46.279 AccessChecks                      OK       Successfully connected using driver access toolkit
+ 
+Conform is using ASCOM.DriverAccess.Camera to get a Camera object
+23:16:46.651 ConformanceCheck                  OK       Driver instance created successfully
+23:16:47.038 ConformanceCheck                  OK       Connected OK
+ 
+Common Driver Methods 
+23:16:47.237 InterfaceVersion                  OK       2
+23:16:47.360 Connected                         OK       True
+23:16:47.470 Description                       OK       INDIGO Camera (CCD Imager Simulator)
+23:16:47.575 DriverInfo                        OK       INDIGO Camera driver, version 6.3
+23:16:47.652 DriverVersion                     OK       6.3
+23:16:47.723 Name                              OK       INDIGO Camera
+23:16:47.813 CommandString                     INFO     Conform cannot test the CommandString method
+23:16:47.852 CommandBlind                      INFO     Conform cannot test the CommandBlind method
+23:16:47.910 CommandBool                       INFO     Conform cannot test the CommandBool method
+23:16:47.951 Action                            INFO     Conform cannot test the Action method
+23:16:48.006 SupportedActions                  OK       Driver returned an empty action list
+ 
+Can Properties 
+23:16:48.243 CanAbortExposure                  OK       True
+23:16:48.298 CanAsymmetricBin                  OK       False
+23:16:48.356 CanGetCoolerPower                 OK       True
+23:16:48.398 CanPulseGuide                     OK       False
+23:16:48.448 CanSetCCDTemperature              OK       False
+23:16:48.513 CanStopExposure                   OK       False
+23:16:48.554 CanFastReadout                    OK       False
+ 
+Pre-run Checks 
+ 
+Last Tests 
+23:16:48.902 LastExposureDuration              OK       LastExposureDuration correctly generated a .NET exception before an exposure was made
+23:16:48.976 LastExposureStartTime             OK       LastExposureStartTime correctly generated a .NET exception before an exposure was made
+ 
+Properties 
+23:16:49.327 MaxBinX                           OK       4
+23:16:49.456 MaxBinY                           OK       4
+23:16:49.556 BinX Read                         ERROR    Invalid value: 2
+23:16:49.678 BinY Read                         ERROR    Invalid value: 2
+23:16:49.821 BinX Write                        OK       Exception correctly generated on setting BinX to 0
+23:16:49.880 BinX Write                        OK       Exception correctly generated on setting BinX to 5
+23:16:50.034 BinY Write                        OK       Exception correctly generated on setting BinY to 0
+23:16:50.102 BinY Write                        OK       Exception correctly generated on setting BinY to 5
+23:16:50.183 BinXY Write                       OK       Successfully set symmetric xy binning: 1 x 1
+23:16:50.241 BinXY Write                       OK       Successfully set symmetric xy binning: 2 x 2
+23:16:50.346 BinY Write                        INFO     .NET InvalidValueException received when setting BinY to 0
+23:16:50.403 BinXY Write                       OK       Successfully set symmetric xy binning: 4 x 4
+23:16:50.661 CameraState                       OK       cameraIdle
+23:16:50.823 CameraXSize                       OK       1600
+23:16:50.984 CameraYSize                       OK       1200
+23:16:51.101 CCDTemperature                    OK       25
+23:16:51.247 CoolerOn Read                     OK       False
+23:16:51.371 CoolerOn Write                    OK       Successfully changed CoolerOn state
+23:16:51.513 CoolerPower                       OK       0
+23:16:51.691 ElectronsPerADU                   OK       Optional member threw a PropertyNotImplementedException exception.
+23:16:51.829 FullWellCapacity                  OK       Optional member threw a PropertyNotImplementedException exception.
+23:16:51.944 HasShutter                        OK       False
+23:16:52.090 HeatSinkTemperature               OK       Optional member threw a PropertyNotImplementedException exception.
+23:16:52.190 ImageReady                        OK       False
+23:16:52.309 ImageArray                        OK       Exception correctly generated when ImageReady is false
+23:16:52.392 ImageArrayVariant                 OK       Exception correctly generated when ImageReady is false
+23:16:52.496 IsPulseGuiding                    OK       False
+23:16:52.632 MaxADU                            OK       20000
+23:16:52.780 NumX Read                         OK       1600
+23:16:52.932 NumX write                        OK       Successfully wrote 800
+23:16:53.017 NumY Read                         OK       1200
+23:16:53.122 NumY write                        OK       Successfully wrote 600
+23:16:53.218 PixelSizeX                        OK       5.2
+23:16:53.346 PixelSizeY                        OK       5.2
+23:16:53.485 SetCCDTemperature Read            OK       0
+23:16:53.602 SetCCDTemperature Write           OK       CanSetCCDTemperature is false and exception correctly generated on write
+23:16:53.713 StartX Read                       OK       0
+23:16:53.841 StartX write                      OK       Successfully wrote 800
+23:16:53.939 StartY Read                       OK       0
+23:16:54.095 StartY write                      OK       Successfully wrote 600
+23:16:54.170 SensorType Read                   OK       Monochrome
+23:16:54.290 BayerOffsetX Read                 OK       Sensortype is Monochrome and a PropertyNotImplementedException exception was generated as expected
+23:16:54.405 BayerOffsetY Read                 OK       Sensortype is Monochrome and a PropertyNotImplementedException exception was generated as expected
+23:16:54.545 ExposureMax Read                  OK       10000
+23:16:54.689 ExposureMin Read                  OK       0
+23:16:54.815 ExposureMin                       OK       ExposureMin is less than or equal to ExposureMax
+23:16:54.907 ExposureResolution Read           OK       0
+23:16:54.995 ExposureResolution                OK       ExposureResolution is less than or equal to ExposureMax
+23:16:55.094 FastReadout Read                  OK       .NET - Feature not implemented
+23:16:55.201 FastReadout Write                 OK       .NET - Feature not implemented
+23:16:55.291 GainMin Read                      OK       0
+23:16:55.385 GainMax Read                      OK       500
+23:16:55.472 GainMinMax                        OK       Both GainMin and GainMax are readable or both throw exceptions
+23:16:55.593 Gains Read                        OK       .NET - Feature not implemented
+23:16:55.694 Gain Read                         OK       100
+23:16:55.822 PercentCompleted Read             OK       0
+23:16:55.926 ReadoutModes Read                 OK       Normal
+23:16:56.038 ReadoutMode Read                  OK       0
+23:16:56.118 ReadoutMode Index                 OK       ReadReadoutMode is within the bounds of the ReadoutModes ArrayList
+23:16:56.238 ReadoutMode Index                 INFO     Current value: Normal
+23:16:56.324 SensorName Read                   OK       UNKNOWN
+ 
+Methods 
+23:16:56.676 AbortExposure                     OK       No exception generated when camera is already idle
+23:16:56.840 PulseGuide                        OK       CanPulseGuide is false and Pulseguide is not implemented in this driver
+23:16:56.984 StopExposure                      OK       CanStopExposure is false and .NET exception correctly generated
+ 
+Take image full frame 1 x 1 bin 
+23:17:19.834 StartExposure                     OK       Synchronous exposure found OK: 2 seconds
+23:17:19.843 LastExposureDuration              OK       LastExposureDuration is: 2 seconds
+23:17:19.851 LastExposureStartTime             OK       LastExposureStartTime is correct to within 2 seconds: 2018-07-24T23:16:57 UTC
+23:17:19.857 ImageArray                        OK       Successfully read 32 bit integer array (1 plane) 1600 x 1200 pixels
+23:17:20.133 ImageArrayVariant                 OK       Successfully read variant array (1 plane) with System.Int32 elements 1600 x 1200 pixels
+ 
+Take image full frame 2 x 2 bin 
+23:17:29.547 StartExposure                     OK       Synchronous exposure found OK: 2 seconds
+23:17:29.558 LastExposureDuration              OK       LastExposureDuration is: 2 seconds
+23:17:29.567 LastExposureStartTime             OK       LastExposureStartTime is correct to within 2 seconds: 2018-07-24T23:17:20 UTC
+23:17:29.574 ImageArray                        OK       Successfully read 32 bit integer array (1 plane) 800 x 600 pixels
+23:17:29.652 ImageArrayVariant                 OK       Successfully read variant array (1 plane) with System.Int32 elements 800 x 600 pixels
+ 
+Take image full frame 3 x 3 bin 
+23:17:30.049 BinXY Write                       INFO     Exposure skipped because BinX or BinY cannot be set. Exception message:
+23:17:30.150 BinXY Write                                BinX set - '3' is an invalid value. The valid range is: 1..4.
+ 
+Take image full frame 4 x 4 bin 
+23:17:34.731 StartExposure                     OK       Synchronous exposure found OK: 2 seconds
+23:17:34.770 LastExposureDuration              OK       LastExposureDuration is: 2 seconds
+23:17:34.882 LastExposureStartTime             OK       LastExposureStartTime is correct to within 2 seconds: 2018-07-24T23:17:30 UTC
+23:17:34.973 ImageArray                        OK       Successfully read 32 bit integer array (1 plane) 400 x 300 pixels
+23:17:35.100 ImageArrayVariant                 OK       Successfully read variant array (1 plane) with System.Int32 elements 400 x 300 pixels
+ 
+StartExposure error cases 
+23:17:35.539 StartExposure                     OK       Exception correctly generated for negative duration
+23:17:35.692 StartExposure                     OK       Exception correctly generated for X size larger than binned chip size, Bin 1x1
+23:17:35.843 StartExposure                     OK       Exception correctly generated for Y size larger than binned chip size, Bin 1x1
+23:17:36.014 StartExposure                     OK       Exception correctly generated for X start outside binned chip size, Bin 1x1
+23:17:36.182 StartExposure                     OK       Exception correctly generated for Y start outside binned chip size, Bin 1x1
+23:17:36.345 StartExposure                     OK       Exception correctly generated for X size larger than binned chip size, Bin 2x2
+23:17:36.511 StartExposure                     OK       Exception correctly generated for Y size larger than binned chip size, Bin 2x2
+23:17:36.663 StartExposure                     OK       Exception correctly generated for X start outside binned chip size, Bin 2x2
+23:17:36.861 StartExposure                     OK       Exception correctly generated for Y start outside binned chip size, Bin 2x2
+23:17:37.005 BinXY Write                       INFO     Exposure skipped because BinX or BinY cannot be set. Exception message:
+23:17:37.089 BinXY Write                                BinX set - '3' is an invalid value. The valid range is: 1..4.
+23:17:37.214 BinXY Write                       INFO     Exposure skipped because BinX or BinY cannot be set. Exception message:
+23:17:37.304 BinXY Write                                BinX set - '3' is an invalid value. The valid range is: 1..4.
+23:17:37.448 BinXY Write                       INFO     Exposure skipped because BinX or BinY cannot be set. Exception message:
+23:17:37.539 BinXY Write                                BinX set - '3' is an invalid value. The valid range is: 1..4.
+23:17:37.697 BinXY Write                       INFO     Exposure skipped because BinX or BinY cannot be set. Exception message:
+23:17:37.792 BinXY Write                                BinX set - '3' is an invalid value. The valid range is: 1..4.
+23:17:37.970 StartExposure                     OK       Exception correctly generated for X size larger than binned chip size, Bin 4x4
+23:17:38.137 StartExposure                     OK       Exception correctly generated for Y size larger than binned chip size, Bin 4x4
+23:17:38.272 StartExposure                     OK       Exception correctly generated for X start outside binned chip size, Bin 4x4
+23:17:38.454 StartExposure                     OK       Exception correctly generated for Y start outside binned chip size, Bin 4x4
+ 
+Post-run Checks 
+23:17:38.844 PostRunCheck                      OK       Camera returned to intitial cooler temperature
+ 
+Conformance test complete 
+ 
+Your driver had 2 errors, 0 warnings and 0 issues
