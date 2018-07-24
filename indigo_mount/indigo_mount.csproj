@@ -126,6 +126,10 @@
       <Name>indigo_driver</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="conformance.txt" />
+    <Content Include="test.js" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

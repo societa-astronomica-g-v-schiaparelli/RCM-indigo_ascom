@@ -36,7 +36,6 @@ namespace ASCOM.INDIGO {
     #region Implementation of IRate
 
     public void Dispose() {
-      throw new System.NotImplementedException();
     }
 
     public double Maximum {
@@ -110,7 +109,6 @@ namespace ASCOM.INDIGO {
     }
 
     public void Dispose() {
-      throw new System.NotImplementedException();
     }
 
     public IEnumerator GetEnumerator() {
@@ -175,7 +173,6 @@ namespace ASCOM.INDIGO {
     }
 
     public void Dispose() {
-      throw new System.NotImplementedException();
     }
 
     public DriveRates this[int index] {

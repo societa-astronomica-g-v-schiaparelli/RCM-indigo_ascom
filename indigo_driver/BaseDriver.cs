@@ -52,7 +52,7 @@ namespace ASCOM.INDIGO {
 
     protected virtual void PropertyAdded(Property property) {
       if (property.DeviceName == deviceName) {
-        Log("def" + property);
+        //Log("def" + property);
         if (property.Name == "CONFIG") {
           configProperty = (SwitchProperty)property;
           waitFor.Hide(ref waitingForConfigProperty);
@@ -66,7 +66,7 @@ namespace ASCOM.INDIGO {
 
     protected virtual void PropertyUpdated(Property property) {
       if (property.DeviceName == deviceName) {
-        Log("set" + property);
+        //Log("set" + property);
         if (property == connectionProperty) {
           SwitchItem item = (SwitchItem)property.GetItem("CONNECTED");
           connectedState = item != null && item.Value;
@@ -81,7 +81,7 @@ namespace ASCOM.INDIGO {
     }
 
     private void PropertyRemoved(Property property) {
-      Log("del" + property);
+      //Log("del" + property);
       if (property.DeviceName == deviceName && property.Name == "CONFIG") {
         connectionProperty = null;
       } else if (property.DeviceName == deviceName && property.Name == "CONNECTION") {

@@ -372,7 +372,9 @@ namespace ASCOM.INDIGO {
         if (AtPark)
           throw new ASCOM.InvalidOperationException("MoveAxis - Parked");
         if (Axis != TelescopeAxes.axisPrimary && Axis != TelescopeAxes.axisSecondary)
-          throw new InvalidValueException("CanMoveAxis", Axis.ToString(), "0 to 2");
+          throw new InvalidValueException("CanMoveAxis - Axis", Axis.ToString(), "0 to 2");
+        if (!(Rate == 0 || (Rate >= 1 && Rate <= 4) || (Rate >= -4 && Rate <= -1)))
+          throw new InvalidValueException("CanMoveAxis - Rate", Rate.ToString(), "0, 1 to 4");
         SwitchProperty SlewRateProperty = (SwitchProperty)device.GetProperty("MOUNT_SLEW_RATE");
         if (SlewRateProperty != null) {
           switch ((int)Rate) {
@@ -429,8 +431,9 @@ namespace ASCOM.INDIGO {
         SwitchProperty MountParkProperty = (SwitchProperty)device.GetProperty("MOUNT_PARK");
         if (MountParkProperty != null) {
           MountParkProperty.SetSingleValue("PARKED", true);
-          while (MountParkProperty.State == Property.States.Busy)
+          do
             Thread.Sleep(100);
+          while (MountParkProperty.State == Property.States.Busy);
           return;
         }
         throw new ASCOM.InvalidOperationException("Park - missing MOUNT_PARK property");
@@ -547,8 +550,9 @@ namespace ASCOM.INDIGO {
           NumberProperty GeographicCoordProperty = (NumberProperty)device.GetProperty("GEOGRAPHIC_COORDINATES");
           if (GeographicCoordProperty != null) {
             GeographicCoordProperty.SetSingleValue("LATITUDE", value);
-            while (GeographicCoordProperty.State == Property.States.Busy)
+            do
               Thread.Sleep(100);
+            while (GeographicCoordProperty.State == Property.States.Busy);
             return;
           }
           throw new ASCOM.InvalidOperationException("SiteLatitude - missing GEOGRAPHIC_COORDINATES property");
@@ -576,8 +580,9 @@ namespace ASCOM.INDIGO {
           NumberProperty GeographicCoordProperty = (NumberProperty)device.GetProperty("GEOGRAPHIC_COORDINATES");
           if (GeographicCoordProperty != null) {
             GeographicCoordProperty.SetSingleValue("LONGITUDE", value + 180);
-            while (GeographicCoordProperty.State == Property.States.Busy)
+            do
               Thread.Sleep(100);
+            while (GeographicCoordProperty.State == Property.States.Busy);
             return;
           }
           throw new ASCOM.InvalidOperationException("SiteLongitude - missing GEOGRAPHIC_COORDINATES property");
@@ -605,8 +610,9 @@ namespace ASCOM.INDIGO {
 
     public void SlewToCoordinates(double RightAscension, double Declination) {
       SlewToCoordinatesAsync(RightAscension, Declination);
-      while (Slewing)
+      do {
         Thread.Sleep(100);
+      } while (Slewing);
     }
 
     public void SlewToCoordinatesAsync(double RightAscension, double Declination) {
@@ -647,11 +653,24 @@ namespace ASCOM.INDIGO {
 
     public bool Slewing {
       get {
+        bool result = false;
         NumberProperty MountEquatorialProperty = (NumberProperty)device.GetProperty("MOUNT_EQUATORIAL_COORDINATES");
         if (MountEquatorialProperty != null) {
-          return MountEquatorialProperty.State == Property.States.Busy;
+          result = MountEquatorialProperty.State == Property.States.Busy;
         }
-        throw new ASCOM.MethodNotImplementedException("Slewing");
+        if (!result) {
+          SwitchProperty MotionNSProperty = (SwitchProperty)device.GetProperty("MOUNT_MOTION_DEC");
+          if (MotionNSProperty != null) {
+            result = ((SwitchItem)MotionNSProperty.GetItem("NORTH")).Value || ((SwitchItem)MotionNSProperty.GetItem("SOUTH")).Value;
+          }
+        }
+        if (!result) {
+          SwitchProperty MotionWEProperty = (SwitchProperty)device.GetProperty("MOUNT_MOTION_RA");
+          if (MotionWEProperty != null) {
+            result = ((SwitchItem)MotionWEProperty.GetItem("WEST")).Value || ((SwitchItem)MotionWEProperty.GetItem("EAST")).Value;
+          }
+        }
+        return result;
       }
     }
 
@@ -739,8 +758,9 @@ namespace ASCOM.INDIGO {
           SwitchProperty TrackingProperty = (SwitchProperty)device.GetProperty("MOUNT_TRACKING");
           if (TrackingProperty != null) {
             TrackingProperty.SetSingleValue(value ? "ON" : "OFF", true);
-            while (TrackingProperty.State == Property.States.Busy)
+            do
               Thread.Sleep(100);
+            while (TrackingProperty.State == Property.States.Busy);
             return;
           }
           throw new ASCOM.InvalidOperationException("Tracking - missing MOUNT_TRACKING property");
@@ -779,8 +799,9 @@ namespace ASCOM.INDIGO {
                 TrackRateProperty.SetSingleValue("SIDEREAL", true);
                 break;
             }
-            while (TrackRateProperty.State == Property.States.Busy)
+            do
               Thread.Sleep(100);
+            while (TrackRateProperty.State == Property.States.Busy);
             return;
           }
           throw new ASCOM.InvalidOperationException("TrackingRate - missing MOUNT_TRACK_RATE property");
@@ -809,8 +830,9 @@ namespace ASCOM.INDIGO {
         SwitchProperty MountParkProperty = (SwitchProperty)device.GetProperty("MOUNT_PARK");
         if (MountParkProperty != null) {
           MountParkProperty.SetSingleValue("UNPARKED", true);
-          while (MountParkProperty.State == Property.States.Busy)
+          do
             Thread.Sleep(100);
+          while (MountParkProperty.State == Property.States.Busy);
           return;
         }
         throw new ASCOM.InvalidOperationException("Unpark - missing MOUNT_PARK property");

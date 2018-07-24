@@ -1,4 +1,7 @@
-﻿ 
+﻿Startup ASCOM Device Conformance Checker - 32bit mode
+Startup ASCOM Platform 6.3 6.3.0.2831
+ 
+ 
 ConformanceCheck ASCOM Device Conformance Checker Version 6.2.59.0, Build time: 1/9/2017 8:44:32 AM
 ConformanceCheck Running on: ASCOM Platform 6.3 6.3.0.2831
  
@@ -12,215 +15,227 @@ Error number for "Value Not Set 1" is: 80040402
 Error number for "Value Not Set 2" is: 80040403
 Error messages will not be interpreted to infer state.
  
-23:12:17.521 Driver Access Checks              OK       
-23:12:18.331 AccessChecks                      OK       Successfully created driver using late binding
-23:12:33.199 AccessChecks                      OK       Successfully connected using late binding
-23:12:33.280 AccessChecks                      INFO     The driver is a .NET object
-23:12:33.364 AccessChecks                      INFO     The AssemblyQualifiedName is: ASCOM.INDIGO.Mount, ASCOM.INDIGO.Mount, Version=6.2.6779.41304, Culture=neut
-23:12:33.413 AccessChecks                      INFO     The driver implements interface: ASCOM.DeviceInterface.ITelescopeV3
-23:12:34.154 AccessChecks                      INFO     Device does not expose interface ITelescopeV2
-23:12:34.954 AccessChecks                      INFO     Device exposes interface ITelescopeV3
-23:12:36.289 AccessChecks                      OK       Successfully created driver using driver access toolkit
-23:12:36.462 AccessChecks                      OK       Successfully connected using driver access toolkit
+00:35:12.007 Driver Access Checks              OK       
+00:35:12.881 AccessChecks                      OK       Successfully created driver using late binding
+00:35:17.014 AccessChecks                      OK       Successfully connected using late binding
+00:35:17.093 AccessChecks                      INFO     The driver is a .NET object
+00:35:17.134 AccessChecks                      INFO     The AssemblyQualifiedName is: ASCOM.INDIGO.Mount, ASCOM.INDIGO.Mount, Version=6.2.6780.1049, Culture=neutr
+00:35:17.213 AccessChecks                      INFO     The driver implements interface: ASCOM.DeviceInterface.ITelescopeV3
+00:35:17.959 AccessChecks                      INFO     Device does not expose interface ITelescopeV2
+00:35:18.729 AccessChecks                      INFO     Device exposes interface ITelescopeV3
+00:35:20.153 AccessChecks                      OK       Successfully created driver using driver access toolkit
+00:35:20.337 AccessChecks                      OK       Successfully connected using driver access toolkit
  
 Conform is using ASCOM.DriverAccess.Telescope to get a Telescope object
-23:12:37.914 ConformanceCheck                  OK       Driver instance created successfully
-23:12:38.164 ConformanceCheck                  OK       Connected OK
+00:35:21.773 ConformanceCheck                  OK       Driver instance created successfully
+00:35:21.990 ConformanceCheck                  OK       Connected OK
  
 Common Driver Methods 
-23:12:38.332 InterfaceVersion                  OK       3
-23:12:38.410 Connected                         OK       True
-23:12:38.498 Description                       OK       INDIGO Mount (Mount Simulator)
-23:12:38.599 DriverInfo                        OK       INDIGO Mount driver, version 6.2
-23:12:38.717 DriverVersion                     OK       6.2
-23:12:38.877 Name                              OK       INDIGO Mount
-23:12:38.957 CommandString                     INFO     Conform cannot test the CommandString method
-23:12:39.007 CommandBlind                      INFO     Conform cannot test the CommandBlind method
-23:12:39.066 CommandBool                       INFO     Conform cannot test the CommandBool method
-23:12:39.123 Action                            INFO     Conform cannot test the Action method
-23:12:39.164 SupportedActions                  OK       Driver returned an empty action list
+00:35:22.261 InterfaceVersion                  OK       3
+00:35:22.334 Connected                         OK       True
+00:35:22.432 Description                       OK       INDIGO Mount (Mount Simulator)
+00:35:22.556 DriverInfo                        OK       INDIGO Mount driver, version 6.2
+00:35:22.644 DriverVersion                     OK       6.2
+00:35:22.735 Name                              OK       INDIGO Mount
+00:35:22.819 CommandString                     INFO     Conform cannot test the CommandString method
+00:35:22.877 CommandBlind                      INFO     Conform cannot test the CommandBlind method
+00:35:22.922 CommandBool                       INFO     Conform cannot test the CommandBool method
+00:35:23.000 Action                            INFO     Conform cannot test the Action method
+00:35:23.054 SupportedActions                  OK       Driver returned an empty action list
  
 Can Properties 
-23:12:39.445 CanFindHome                       OK       False
-23:12:39.489 CanPark                           OK       True
-23:12:39.561 CanPulseGuide                     OK       False
-23:12:39.615 CanSetDeclinationRate             OK       False
-23:12:39.663 CanSetGuideRates                  OK       False
-23:12:39.711 CanSetPark                        OK       False
-23:12:39.784 CanSetPierSide                    OK       False
-23:12:39.856 CanSetRightAscensionRate          OK       False
-23:12:39.918 CanSetTracking                    OK       True
-23:12:40.004 CanSlew                           OK       True
-23:12:40.087 CanSlewltAz                       OK       False
-23:12:40.161 CanSlewAltAzAsync                 OK       False
-23:12:40.231 CanSlewAsync                      OK       True
-23:12:40.312 CanSync                           OK       True
-23:12:40.395 CanSyncAltAz                      OK       False
-23:12:40.476 CanUnPark                         OK       True
+00:35:23.313 CanFindHome                       OK       False
+00:35:23.383 CanPark                           OK       True
+00:35:23.445 CanPulseGuide                     OK       False
+00:35:23.680 CanSetDeclinationRate             OK       False
+00:35:23.733 CanSetGuideRates                  OK       False
+00:35:23.827 CanSetPark                        OK       False
+00:35:23.917 CanSetPierSide                    OK       False
+00:35:24.116 CanSetRightAscensionRate          OK       False
+00:35:24.137 CanSetTracking                    OK       True
+00:35:24.183 CanSlew                           OK       True
+00:35:24.273 CanSlewltAz                       OK       False
+00:35:24.365 CanSlewAltAzAsync                 OK       False
+00:35:24.472 CanSlewAsync                      OK       True
+00:35:24.565 CanSync                           OK       True
+00:35:24.658 CanSyncAltAz                      OK       False
+00:35:24.755 CanUnPark                         OK       True
  
 Pre-run Checks 
-23:12:40.817 Mount Safety                      INFO     Scope is parked, so it has been unparked for testing
-23:12:41.018 Mount Safety                      INFO     Scope tracking has been enabled
-23:12:41.128 TimeCheck                         INFO     PC Time Zone:  Central Europe Daylight Time, offset -2 hours.
-23:12:41.223 TimeCheck                         INFO     PC UTCDate:    24-Jul-2018 21:12:41.223
-23:12:41.310 TimeCheck                         INFO     Mount UTCDate: 24-Jul-2018 21:12:41.310
+00:35:26.250 Mount Safety                      INFO     Scope is parked, so it has been unparked for testing
+00:35:26.400 Mount Safety                      INFO     Scope tracking has been enabled
+00:35:26.477 TimeCheck                         INFO     PC Time Zone:  Central Europe Daylight Time, offset -2 hours.
+00:35:26.551 TimeCheck                         INFO     PC UTCDate:    24-Jul-2018 22:35:26.551
+00:35:26.679 TimeCheck                         INFO     Mount UTCDate: 24-Jul-2018 22:35:26.678
  
 Properties 
-23:12:41.627 AlignmentMode                     OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:41.749 Altitude                          OK       0.48
-23:12:41.950 ApertureArea                      OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:42.090 ApertureDiameter                  OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:42.195 AtHome                            OK       False
-23:12:42.306 AtPark                            OK       False
-23:12:42.494 Azimuth                           OK       0.00
-23:12:42.650 Declination                       OK        90:00:00.00
-23:12:42.863 DeclinationRate Read              OK       0.00
-23:12:43.119 DeclinationRate Write             OK       CanSetDeclinationRate is False and a PropertyNotImplementedException exception was generated as expected
-23:12:43.538 DoesRefraction Read               OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:43.762 DoesRefraction Write              OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:43.909 EquatorialSystem                  OK       equLocalTopocentric
-23:12:43.995 FocalLength                       OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:44.178 GuideRateDeclination Read         OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:44.348 GuideRateDeclination Write        OK       CanSetGuideRates is False and a PropertyNotImplementedException exception was generated as expected
-23:12:44.551 GuideRateRightAscension Read      OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:44.704 GuideRateRightAscension Write     OK       CanSetGuideRates is False and a PropertyNotImplementedException exception was generated as expected
-23:12:44.911 IsPulseGuideing                   OK       CanPulseGuide is False and a PropertyNotImplementedException exception was generated as expected
-23:12:45.114 RightAscension                    OK       00:00:00.00
-23:12:45.327 RightAscensionRate Read           OK       0.00
-23:12:45.559 RightAscensionRate Write          OK       CanSetRightAscensionRate is False and a PropertyNotImplementedException exception was generated as expected
-23:12:45.738 SiteElevation Read                OK       0
-23:12:45.893 SiteElevation Write               OK       Invalid Value exception generated as expected on set site elevation < -300m
-23:12:46.004 SiteElevation Write               OK       Invalid Value exception generated as expected on set site elevation > 10,000m
-23:12:46.138 SiteElevation Write               OK       Legal value 0m written successfully
-23:12:46.439 SiteLatitude Read                 OK        00:00:00.00
-23:12:46.601 SiteLatitude Write                OK       Invalid Value exception generated as expected on set site latitude < -90 degrees
-23:12:46.744 SiteLatitude Write                OK       Invalid Value exception generated as expected on set site latitude > 90 degrees
-23:12:46.909 SiteLatitude Write                OK       Legal value  00:00:00.00 degrees written successfully
-23:12:47.523 SiteLongitude Read                OK       -180:00:00.00
-23:12:47.780 SiteLongitude Write               OK       Invalid Value exception generated as expected on set site longitude < -180 degrees
-23:12:47.958 SiteLongitude Write               OK       Invalid Value exception generated as expected on set site longitude > 180 degrees
-23:12:48.142 SiteLongitude Write               OK       Legal value -180:00:00.00 degrees written successfully
-23:12:48.371 Slewing                           OK       False
-23:12:48.615 SlewSettleTime Read               OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:48.788 SlewSettleTime Write              OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:48.950 SlewSettleTime Write              OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:49.178 SideOfPier Read                   OK       Optional member threw a PropertyNotImplementedException exception.
-23:12:49.431 SiderealTime                      OK       05:22:58.84
-23:12:49.654 SiderealTime                      OK       Scope and ASCOM sidereal times agree to better than 1 second, Scope: 05:22:58.84, ASCOM: 05:22:59.63
-23:12:49.856 TargetDeclination Read            OK       .NET Not InvalidOperationException generated on read before write
-23:12:50.010 TargetDeclination Write           OK       Invalid Value exception generated as expected on set TargetDeclination < -90 degrees
-23:12:50.122 TargetDeclination Write           OK       Invalid Value exception generated as expected on set TargetDeclination < -90 degrees
-23:12:50.250 TargetDeclination Write           OK       Legal value  01:00:00.00 DD:MM:SS written successfully
-23:12:50.423 TargetRightAscension Read         OK       .NET Not InvalidOperationException generated on read before write
-23:12:50.603 TargetRightAscension Write        OK       Invalid Value exception generated as expected on set TargetRightAscension < 0 hours
-23:12:50.747 TargetRightAscension Write        OK       Invalid Value exception generated as expected on set TargetRightAscension > 24 hours
-23:12:50.898 TargetRightAscension Write        OK       Legal value 01:23:00.31 HH:MM:SS written successfully
-23:12:51.082 Tracking Read                     OK       True
-23:12:52.281 Tracking Write                    OK       False
-23:12:53.367 TrackingRates                              Found drive rate: driveSidereal
-23:12:53.416 TrackingRates                              Found drive rate: driveLunar
-23:12:53.508 TrackingRates                              Found drive rate: driveSolar
-23:12:53.622 TrackingRates                     OK       Drive rates read OK
-23:12:53.795 TrackingRate Read                 OK       driveSidereal
-23:12:53.946 TrackingRate Write                OK       Successfully set drive rate: driveSidereal
-23:12:54.129 TrackingRate Write                ISSUE    Unable to set drive rate: driveLunar
-23:12:54.292 TrackingRate Write                ISSUE    Unable to set drive rate: driveSolar
-23:12:54.500 UTCDate Read                      OK       24-Jul-2018 21:12:54.500
-23:12:54.650 UTCDate Write                     OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:27.069 AlignmentMode                     OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:27.196 Altitude                          OK       0.48
+00:35:27.316 ApertureArea                      OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:27.438 ApertureDiameter                  OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:27.558 AtHome                            OK       False
+00:35:27.643 AtPark                            OK       False
+00:35:27.779 Azimuth                           OK       0.00
+00:35:27.891 Declination                       OK        90:00:00.00
+00:35:27.993 DeclinationRate Read              OK       0.00
+00:35:28.125 DeclinationRate Write             OK       CanSetDeclinationRate is False and a PropertyNotImplementedException exception was generated as expected
+00:35:28.252 DoesRefraction Read               OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:28.347 DoesRefraction Write              OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:28.456 EquatorialSystem                  OK       equLocalTopocentric
+00:35:28.602 FocalLength                       OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:28.743 GuideRateDeclination Read         OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:28.864 GuideRateDeclination Write        OK       CanSetGuideRates is False and a PropertyNotImplementedException exception was generated as expected
+00:35:29.037 GuideRateRightAscension Read      OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:29.174 GuideRateRightAscension Write     OK       CanSetGuideRates is False and a PropertyNotImplementedException exception was generated as expected
+00:35:29.339 IsPulseGuideing                   OK       CanPulseGuide is False and a PropertyNotImplementedException exception was generated as expected
+00:35:29.462 RightAscension                    OK       00:00:00.00
+00:35:29.603 RightAscensionRate Read           OK       0.00
+00:35:29.736 RightAscensionRate Write          OK       CanSetRightAscensionRate is False and a PropertyNotImplementedException exception was generated as expected
+00:35:29.851 SiteElevation Read                OK       0
+00:35:29.986 SiteElevation Write               OK       Invalid Value exception generated as expected on set site elevation < -300m
+00:35:30.064 SiteElevation Write               OK       Invalid Value exception generated as expected on set site elevation > 10,000m
+00:35:30.217 SiteElevation Write               OK       Legal value 0m written successfully
+00:35:30.458 SiteLatitude Read                 OK        00:00:00.00
+00:35:30.604 SiteLatitude Write                OK       Invalid Value exception generated as expected on set site latitude < -90 degrees
+00:35:30.695 SiteLatitude Write                OK       Invalid Value exception generated as expected on set site latitude > 90 degrees
+00:35:30.931 SiteLatitude Write                OK       Legal value  00:00:00.00 degrees written successfully
+00:35:31.070 SiteLongitude Read                OK       -180:00:00.00
+00:35:31.218 SiteLongitude Write               OK       Invalid Value exception generated as expected on set site longitude < -180 degrees
+00:35:31.322 SiteLongitude Write               OK       Invalid Value exception generated as expected on set site longitude > 180 degrees
+00:35:31.557 SiteLongitude Write               OK       Legal value -180:00:00.00 degrees written successfully
+00:35:31.703 Slewing                           OK       False
+00:35:31.875 SlewSettleTime Read               OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:32.029 SlewSettleTime Write              OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:32.156 SlewSettleTime Write              OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:32.331 SideOfPier Read                   OK       Optional member threw a PropertyNotImplementedException exception.
+00:35:32.525 SiderealTime                      OK       06:45:55.51
+00:35:32.618 SiderealTime                      OK       Scope and ASCOM sidereal times agree to better than 1 second, Scope: 06:45:55.51, ASCOM: 06:45:56.31
+00:35:32.771 TargetDeclination Read            OK       .NET Not InvalidOperationException generated on read before write
+00:35:32.923 TargetDeclination Write           OK       Invalid Value exception generated as expected on set TargetDeclination < -90 degrees
+00:35:33.045 TargetDeclination Write           OK       Invalid Value exception generated as expected on set TargetDeclination < -90 degrees
+00:35:33.164 TargetDeclination Write           OK       Legal value  01:00:00.00 DD:MM:SS written successfully
+00:35:33.310 TargetRightAscension Read         OK       .NET Not InvalidOperationException generated on read before write
+00:35:33.468 TargetRightAscension Write        OK       Invalid Value exception generated as expected on set TargetRightAscension < 0 hours
+00:35:33.565 TargetRightAscension Write        OK       Invalid Value exception generated as expected on set TargetRightAscension > 24 hours
+00:35:33.683 TargetRightAscension Write        OK       Legal value 02:45:56.68 HH:MM:SS written successfully
+00:35:33.826 Tracking Read                     OK       True
+00:35:35.088 Tracking Write                    OK       False
+00:35:36.340 TrackingRates                              Found drive rate: driveSidereal
+00:35:36.377 TrackingRates                              Found drive rate: driveLunar
+00:35:36.475 TrackingRates                              Found drive rate: driveSolar
+00:35:36.577 TrackingRates                     OK       Drive rates read OK
+00:35:36.745 TrackingRate Read                 OK       driveSidereal
+00:35:36.984 TrackingRate Write                OK       Successfully set drive rate: driveSidereal
+00:35:37.171 TrackingRate Write                OK       Successfully set drive rate: driveLunar
+00:35:37.435 TrackingRate Write                OK       Successfully set drive rate: driveSolar
+00:35:37.630 UTCDate Read                      OK       24-Jul-2018 22:35:37.630
+00:35:37.733 UTCDate Write                     OK       Optional member threw a PropertyNotImplementedException exception.
  
 Methods 
-23:12:55.158 CanMoveAxis:Primary               OK       CanMoveAxis:Primary True
-23:12:55.331 CanMoveAxis:Secondary             OK       CanMoveAxis:Secondary True
-23:12:55.526 CanMoveAxis:Tertiary              OK       CanMoveAxis:Tertiary False
-23:12:56.035 Park                              OK       Success
-23:12:57.852 Park                              OK       Success if already parked
-23:12:57.982 Park:AbortSlew                    OK       AbortSlew did raise an exception when Parked as required
-23:12:58.219 Park:MoveAxis Primary             OK       MoveAxis Primary did raise an exception when Parked as required
-23:12:58.475 Park:MoveAxis Secondary           OK       MoveAxis Secondary did raise an exception when Parked as required
-23:12:58.700 Park:SlewToCoordinates            OK       SlewToCoordinates did raise an exception when Parked as required
-23:12:59.052 Park:SlewToCoordinatesAsync       OK       SlewToCoordinatesAsync did raise an exception when Parked as required
-23:12:59.273 Park:SlewToTarget                 OK       SlewToTarget did raise an exception when Parked as required
-23:12:59.532 Park:SlewToTargetAsync            OK       SlewToTargetAsync did raise an exception when Parked as required
-23:12:59.883 Park:SyncToCoordinates            OK       SyncToCoordinates did raise an exception when Parked as required
-23:13:00.219 Park:SyncToTarget                 OK       SyncToTarget did raise an exception when Parked as required
-23:13:00.737 UnPark                            OK       Success
-23:13:02.527 UnPark                            OK       Success if already unparked
-23:13:02.646 AbortSlew                         OK       AbortSlew Ok when not slewing
-23:13:02.881 AxisRate:Primary                  OK       Axis rate minimum: 1 Axis rate maximum: 4
-23:13:02.986 AxisRate:Primary                  OK       No overlapping axis rates found
-23:13:03.103 AxisRate:Primary                  OK       No duplcate axis rates found
-23:13:03.243 AxisRate:Secondary                OK       Axis rate minimum: 1 Axis rate maximum: 4
-23:13:03.338 AxisRate:Secondary                OK       No overlapping axis rates found
-23:13:03.472 AxisRate:Secondary                OK       No duplcate axis rates found
-23:13:03.606 AxisRate:Tertiary                 OK       Empty axis rate returned
-23:13:03.742 FindHome                          OK       CanFindHome is False and a MethodNotImplementedException exception was generated as expected
-23:13:03.969 MoveAxis Primary                  ISSUE    Received a System.NotImplementedException instead of an ASCOM.MethodNotImplementedException
-23:13:04.160 MoveAxis Secondary                ISSUE    Received a System.NotImplementedException instead of an ASCOM.MethodNotImplementedException
-23:13:04.389 MoveAxis Tertiary                 OK       Received an invalid value exception
-23:13:04.597 PulseGuide                        OK       CanPulseGuide is False and a MethodNotImplementedException exception was generated as expected
-23:13:04.892 SlewToCoordinates                 INFO     Slewed within 231514.2 arc seconds of expected RA: 04:23:14.28, actual RA: 00:06:00.00
-23:13:05.111 SlewToCoordinates                 INFO     Slewed within 309600.0 arc seconds of expected DEC:  01:00:00.00, actual DEC:  90:00:00.00
-23:13:05.350 SlewToCoordinates (Bad L)         OK       Correctly rejected bad RA coordinate: -01:00:00.00
-23:13:05.540 SlewToCoordinates (Bad L)         OK       Correctly rejected bad Dec coordinate: -100:00:00.00
-23:13:05.811 SlewToCoordinates (Bad H)         OK       Correctly rejected bad RA coordinate: 25:00:00.00
-23:13:06.060 SlewToCoordinates (Bad H)         OK       Correctly rejected bad Dec coordinate: 100:00:00.00
-23:13:16.759 SlewToCoordinatesAsync            OK       Slewed OK. RA:   03:23:15.78
-23:13:16.879 SlewToCoordinatesAsync            OK       Slewed OK. DEC:  02:00:00.00
-23:13:17.154 SlewToCoordinatesAsync (Bad L)    OK       Correctly rejected bad RA coordinate: -01:00:00.00
-23:13:17.369 SlewToCoordinatesAsync (Bad L)    OK       Correctly rejected bad Dec coordinate: -100:00:00.00
-23:13:17.581 SlewToCoordinatesAsync (Bad H)    OK       Correctly rejected bad RA coordinate: 25:00:00.00
-23:13:17.766 SlewToCoordinatesAsync (Bad H)    OK       Correctly rejected bad Dec coordinate: 100:00:00.00
-23:13:18.120 SlewToTarget                      INFO     Slewed within 43024.2 arc seconds of expected RA: 02:23:27.51, actual RA: 03:11:15.79
-23:13:18.266 SlewToTarget                      OK       Slewed OK. DEC:  03:00:00.00
-23:13:18.492 SlewToTarget (Bad L)              OK       Telescope.TargetRA correctly rejected bad RA coordinate: -01:00:00.00
-23:13:18.685 SlewToTarget (Bad L)              OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: -100:00:00.00
-23:13:18.970 SlewToTarget (Bad H)              OK       Telescope.TargetRA correctly rejected bad RA coordinate: 25:00:00.00
-23:13:19.207 SlewToTarget (Bad H)              OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: 100:00:00.00
-23:13:24.699 SlewToTargetAsync                 OK       Slewed OK. RA:   01:23:28.96
-23:13:24.793 SlewToTargetAsync                 OK       Slewed OK. DEC:  04:00:00.00
-23:13:24.993 SlewToTargetAsync (Bad L)         OK       Telescope.TargetRA correctly rejected bad RA coordinate: -01:00:00.00
-23:13:25.181 SlewToTargetAsync (Bad L)         OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: -100:00:00.00
-23:13:25.384 SlewToTargetAsync (Bad H)         OK       Telescope.TargetRA correctly rejected bad RA coordinate: 25:00:00.00
-23:13:25.555 SlewToTargetAsync (Bad H)         OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: 100:00:00.00
-23:13:25.775 DestinationSideOfPier                      Test skipped as AligmentMode is not German Polar
-23:13:25.972 SlewToAltAz                       OK       CanSlewAltAz is False and a MethodNotImplementedException exception was generated as expected
-23:13:26.253 SlewToAltAzAsync                  OK       CanSlewAltAzAsync is False and a MethodNotImplementedException exception was generated as expected
-23:13:31.766 SyncToCoordinates                 OK       Slewed to start position OK. RA:   02:23:36.01
-23:13:31.889 SyncToCoordinates                 OK       Slewed to start position OK. DEC:  00:00:00.00
-23:13:32.055 SyncToCoordinates                 INFO     Synced to sync position within 3600.3 arc seconds of expected RA: 02:19:36.01, actual RA: 02:23:36.02
-23:13:32.225 SyncToCoordinates                 OK       Synced to sync position OK. DEC: -01:00:00.00
-23:13:37.596 SyncToCoordinates                 OK       Slewed back to start position OK. RA:   02:23:36.01
-23:13:37.670 SyncToCoordinates                 OK       Slewed back to start position OK. DEC:  00:00:00.00
-23:13:37.829 SyncToCoordinates                 OK       Synced to reversed sync position OK. RA:   02:27:36.01
-23:13:38.010 SyncToCoordinates                 OK       Synced to reversed sync position OK. DEC:  01:00:00.00
-23:13:43.452 SyncToCoordinates                 OK       Slewed back to start position OK. RA:   02:23:36.01
-23:13:43.501 SyncToCoordinates                 OK       Slewed back to start position OK. DEC:  00:00:00.00
-23:13:43.722 SyncToCoordinates (Bad L)         OK       Correctly rejected bad RA coordinate: -01:00:00.00
-23:13:43.909 SyncToCoordinates (Bad L)         OK       Correctly rejected bad Dec coordinate: -100:00:00.00
-23:13:44.139 SyncToCoordinates (Bad H)         OK       Correctly rejected bad RA coordinate: 25:00:00.00
-23:13:44.371 SyncToCoordinates (Bad H)         OK       Correctly rejected bad Dec coordinate: 100:00:00.00
-23:13:49.835 SyncToTarget                      OK       Slewed to start position OK. RA:   02:23:54.15
-23:13:49.925 SyncToTarget                      OK       Slewed to start position OK. DEC:  00:00:00.00
-23:13:50.140 SyncToTarget                      INFO     Synced to sync position within 3599.8 arc seconds of expected RA: 02:19:54.15, actual RA: 02:23:54.13
-23:13:50.283 SyncToTarget                      OK       Synced to sync position OK. DEC: -01:00:00.00
-23:13:55.683 SyncToTarget                      OK       Slewed back to start position OK. RA:   02:23:54.15
-23:13:55.741 SyncToTarget                      OK       Slewed back to start position OK. DEC:  00:00:00.00
-23:13:55.896 SyncToTarget                      INFO     Synced to reversed sync position within 3600.2 arc seconds of expected RA: 02:27:54.15, actual RA: 02:23:54.13
-23:13:56.024 SyncToTarget                      OK       Synced to reversed sync position OK. DEC:  01:00:00.00
-23:14:01.414 SyncToTarget                      OK       Slewed back to start position OK. RA:   02:23:54.15
-23:14:01.472 SyncToTarget                      OK       Slewed back to start position OK. DEC:  00:00:00.00
-23:14:01.675 SyncToTarget (Bad L)              OK       Telescope.TargetRA correctly rejected bad RA coordinate: -01:00:00.00
-23:14:01.854 SyncToTarget (Bad L)              OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: -100:00:00.00
-23:14:02.049 SyncToTarget (Bad H)              OK       Telescope.TargetRA correctly rejected bad RA coordinate: 25:00:00.00
-23:14:02.187 SyncToTarget (Bad H)              OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: 100:00:00.00
-23:14:02.370 SyncToAltAz                       OK       CanSyncAltAz is False and a MethodNotImplementedException exception was generated as expected
+00:35:38.243 CanMoveAxis:Primary               OK       CanMoveAxis:Primary True
+00:35:38.399 CanMoveAxis:Secondary             OK       CanMoveAxis:Secondary True
+00:35:38.569 CanMoveAxis:Tertiary              OK       CanMoveAxis:Tertiary False
+00:35:40.124 Park                              OK       Success
+00:35:41.269 Park                              OK       Success if already parked
+00:35:41.377 Park:AbortSlew                    OK       AbortSlew did raise an exception when Parked as required
+00:35:41.549 Park:MoveAxis Primary             OK       MoveAxis Primary did raise an exception when Parked as required
+00:35:41.721 Park:MoveAxis Secondary           OK       MoveAxis Secondary did raise an exception when Parked as required
+00:35:41.931 Park:SlewToCoordinates            OK       SlewToCoordinates did raise an exception when Parked as required
+00:35:42.116 Park:SlewToCoordinatesAsync       OK       SlewToCoordinatesAsync did raise an exception when Parked as required
+00:35:42.326 Park:SlewToTarget                 OK       SlewToTarget did raise an exception when Parked as required
+00:35:42.544 Park:SlewToTargetAsync            OK       SlewToTargetAsync did raise an exception when Parked as required
+00:35:42.773 Park:SyncToCoordinates            OK       SyncToCoordinates did raise an exception when Parked as required
+00:35:42.948 Park:SyncToTarget                 OK       SyncToTarget did raise an exception when Parked as required
+00:35:44.584 UnPark                            OK       Success
+00:35:45.751 UnPark                            OK       Success if already unparked
+00:35:45.910 AbortSlew                         OK       AbortSlew Ok when not slewing
+00:35:46.190 AxisRate:Primary                  OK       Axis rate minimum: 1 Axis rate maximum: 4
+00:35:46.269 AxisRate:Primary                  OK       No overlapping axis rates found
+00:35:46.360 AxisRate:Primary                  OK       No duplcate axis rates found
+00:35:46.482 AxisRate:Secondary                OK       Axis rate minimum: 1 Axis rate maximum: 4
+00:35:46.595 AxisRate:Secondary                OK       No overlapping axis rates found
+00:35:46.709 AxisRate:Secondary                OK       No duplcate axis rates found
+00:35:46.860 AxisRate:Tertiary                 OK       Empty axis rate returned
+00:35:47.018 FindHome                          OK       CanFindHome is False and a MethodNotImplementedException exception was generated as expected
+00:35:47.256 MoveAxis Primary                  OK       Can successfully set a movement rate of zero
+00:35:47.402 MoveAxis Primary                  OK       Exception correctly generated when moveaxis set below lowest rate (0.5)
+00:35:47.572 MoveAxis Primary                  OK       Exception correctly generated when moveaxis set above highest rate (5)
+00:35:51.914 MoveAxis Primary                  OK       Successfully moved axis at minimum rate: 1
+00:35:52.058 MoveAxis Primary                  ISSUE    Slewing is not true immediately after axis starts moving in positive direction
+00:35:54.219 MoveAxis Primary                  ISSUE    Slewing incorrectly remains true after stopping positive axis movement, remaining test skipped
+00:35:54.398 MoveAxis Secondary                OK       Can successfully set a movement rate of zero
+00:35:54.593 MoveAxis Secondary                OK       Exception correctly generated when moveaxis set below lowest rate (0.5)
+00:35:54.752 MoveAxis Secondary                OK       Exception correctly generated when moveaxis set above highest rate (5)
+00:35:59.083 MoveAxis Secondary                OK       Successfully moved axis at minimum rate: 1
+00:35:59.211 MoveAxis Secondary                ISSUE    Slewing is not true immediately after axis starts moving in positive direction
+00:36:01.371 MoveAxis Secondary                ISSUE    Slewing incorrectly remains true after stopping positive axis movement, remaining test skipped
+00:36:01.531 MoveAxis Tertiary                 OK       Received an invalid value exception
+00:36:01.708 PulseGuide                        OK       CanPulseGuide is False and a MethodNotImplementedException exception was generated as expected
+00:36:19.506 SlewToCoordinates                 OK       Slewed OK. RA:   05:46:25.10
+00:36:19.576 SlewToCoordinates                 OK       Slewed OK. DEC:  01:00:00.00
+00:36:19.779 SlewToCoordinates (Bad L)         OK       Correctly rejected bad RA coordinate: -01:00:00.00
+00:36:19.979 SlewToCoordinates (Bad L)         OK       Correctly rejected bad Dec coordinate: -100:00:00.00
+00:36:20.186 SlewToCoordinates (Bad H)         OK       Correctly rejected bad RA coordinate: 25:00:00.00
+00:36:20.357 SlewToCoordinates (Bad H)         OK       Correctly rejected bad Dec coordinate: 100:00:00.00
+00:36:25.873 SlewToCoordinatesAsync            OK       Slewed OK. RA:   04:46:43.75
+00:36:25.938 SlewToCoordinatesAsync            OK       Slewed OK. DEC:  02:00:00.00
+00:36:26.158 SlewToCoordinatesAsync (Bad L)    OK       Correctly rejected bad RA coordinate: -01:00:00.00
+00:36:26.354 SlewToCoordinatesAsync (Bad L)    OK       Correctly rejected bad Dec coordinate: -100:00:00.00
+00:36:26.523 SlewToCoordinatesAsync (Bad H)    OK       Correctly rejected bad RA coordinate: 25:00:00.00
+00:36:26.695 SlewToCoordinatesAsync (Bad H)    OK       Correctly rejected bad Dec coordinate: 100:00:00.00
+00:36:28.940 SlewToTarget                      OK       Slewed OK. RA:   03:46:50.14
+00:36:29.000 SlewToTarget                      OK       Slewed OK. DEC:  03:00:00.00
+00:36:29.214 SlewToTarget (Bad L)              OK       Telescope.TargetRA correctly rejected bad RA coordinate: -01:00:00.00
+00:36:29.372 SlewToTarget (Bad L)              OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: -100:00:00.00
+00:36:29.555 SlewToTarget (Bad H)              OK       Telescope.TargetRA correctly rejected bad RA coordinate: 25:00:00.00
+00:36:29.739 SlewToTarget (Bad H)              OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: 100:00:00.00
+00:36:35.364 SlewToTargetAsync                 OK       Slewed OK. RA:   02:46:53.23
+00:36:35.428 SlewToTargetAsync                 OK       Slewed OK. DEC:  04:00:00.00
+00:36:35.617 SlewToTargetAsync (Bad L)         OK       Telescope.TargetRA correctly rejected bad RA coordinate: -01:00:00.00
+00:36:35.779 SlewToTargetAsync (Bad L)         OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: -100:00:00.00
+00:36:35.948 SlewToTargetAsync (Bad H)         OK       Telescope.TargetRA correctly rejected bad RA coordinate: 25:00:00.00
+00:36:36.097 SlewToTargetAsync (Bad H)         OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: 100:00:00.00
+00:36:36.259 DestinationSideOfPier                      Test skipped as AligmentMode is not German Polar
+00:36:36.597 SlewToAltAz                       OK       CanSlewAltAz is False and a MethodNotImplementedException exception was generated as expected
+00:36:36.946 SlewToAltAzAsync                  OK       CanSlewAltAzAsync is False and a MethodNotImplementedException exception was generated as expected
+00:36:42.289 SyncToCoordinates                 OK       Slewed to start position OK. RA:   03:47:00.30
+00:36:42.374 SyncToCoordinates                 OK       Slewed to start position OK. DEC:  00:00:00.00
+00:36:42.485 SyncToCoordinates                 INFO     Synced to sync position within 3600.2 arc seconds of expected RA: 03:43:00.30, actual RA: 03:47:00.31
+00:36:42.631 SyncToCoordinates                 OK       Synced to sync position OK. DEC: -01:00:00.00
+00:36:48.112 SyncToCoordinates                 OK       Slewed back to start position OK. RA:   03:47:00.30
+00:36:48.188 SyncToCoordinates                 OK       Slewed back to start position OK. DEC:  00:00:00.00
+00:36:48.317 SyncToCoordinates                 OK       Synced to reversed sync position OK. RA:   03:51:00.30
+00:36:48.476 SyncToCoordinates                 OK       Synced to reversed sync position OK. DEC:  01:00:00.00
+00:36:54.010 SyncToCoordinates                 OK       Slewed back to start position OK. RA:   03:47:00.30
+00:36:54.078 SyncToCoordinates                 OK       Slewed back to start position OK. DEC:  00:00:00.00
+00:36:54.283 SyncToCoordinates (Bad L)         OK       Correctly rejected bad RA coordinate: -01:00:00.00
+00:36:54.444 SyncToCoordinates (Bad L)         OK       Correctly rejected bad Dec coordinate: -100:00:00.00
+00:36:54.628 SyncToCoordinates (Bad H)         OK       Correctly rejected bad RA coordinate: 25:00:00.00
+00:36:54.825 SyncToCoordinates (Bad H)         OK       Correctly rejected bad Dec coordinate: 100:00:00.00
+00:37:00.380 SyncToTarget                      OK       Slewed to start position OK. RA:   03:47:18.21
+00:37:00.495 SyncToTarget                      OK       Slewed to start position OK. DEC:  00:00:00.00
+00:37:00.649 SyncToTarget                      INFO     Synced to sync position within 3599.9 arc seconds of expected RA: 03:43:18.21, actual RA: 03:47:18.20
+00:37:00.790 SyncToTarget                      OK       Synced to sync position OK. DEC: -01:00:00.00
+00:37:06.301 SyncToTarget                      OK       Slewed back to start position OK. RA:   03:47:18.21
+00:37:06.360 SyncToTarget                      OK       Slewed back to start position OK. DEC:  00:00:00.00
+00:37:06.493 SyncToTarget                      INFO     Synced to reversed sync position within 3600.1 arc seconds of expected RA: 03:51:18.21, actual RA: 03:47:18.20
+00:37:06.635 SyncToTarget                      OK       Synced to reversed sync position OK. DEC:  01:00:00.00
+00:37:12.123 SyncToTarget                      OK       Slewed back to start position OK. RA:   03:47:18.21
+00:37:12.201 SyncToTarget                      OK       Slewed back to start position OK. DEC:  00:00:00.00
+00:37:12.380 SyncToTarget (Bad L)              OK       Telescope.TargetRA correctly rejected bad RA coordinate: -01:00:00.00
+00:37:12.542 SyncToTarget (Bad L)              OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: -100:00:00.00
+00:37:12.727 SyncToTarget (Bad H)              OK       Telescope.TargetRA correctly rejected bad RA coordinate: 25:00:00.00
+00:37:12.889 SyncToTarget (Bad H)              OK       Telescope.TargetDeclination correctly rejected bad Dec coordinate: 100:00:00.00
+00:37:13.130 SyncToAltAz                       OK       CanSyncAltAz is False and a MethodNotImplementedException exception was generated as expected
  
 SideOfPier Model Tests 
-23:14:02.752 SideOfPier Model Tests            INFO     Tests skipped because this driver does Not support SideOfPier Read
+00:37:13.574 SideOfPier Model Tests            INFO     Tests skipped because this driver does Not support SideOfPier Read
  
 Post-run Checks 
-23:14:03.162 Mount Safety                      OK       Tracking stopped to protect your mount.
+00:37:14.156 Mount Safety                      OK       Tracking stopped to protect your mount.
  
 Conformance test complete 
  
 Your driver had 0 errors, 0 warnings and 4 issues 
+
+The validation file is: C:\Users\polakovic\Documents\ASCOM\Logs 2018-07-25\ASCOM.INDIGO.Mount.Validation.txt 
