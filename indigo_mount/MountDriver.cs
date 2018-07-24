@@ -1,5 +1,5 @@
 //
-// ASCOM Telescope Driver for INDIGO
+// ASCOM Mount Driver for INDIGO
 //
 // Copyright (c) 2018 CloudMakers, s. r. o.
 // All rights reserved.
@@ -19,7 +19,7 @@
 // NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#define Telescope
+#define Mount
 
 using ASCOM.DeviceInterface;
 using ASCOM.Utilities;
@@ -32,11 +32,11 @@ using System.Threading;
 namespace ASCOM.INDIGO {
   [Guid("520a4be5-9287-41e1-833f-d6cce75d9647")]
   [ClassInterface(ClassInterfaceType.None)]
-  public class Telescope : BaseDriver, ITelescopeV3 {
-    internal static string driverID = "ASCOM.INDIGO.Telescope";
-    private static readonly string driverName = "INDIGO Telescope";
+  public class Mount : BaseDriver, ITelescopeV3 {
+    internal static string driverID = "ASCOM.INDIGO.Mount";
+    private static readonly string driverName = "INDIGO Mount";
 
-    public Telescope() {
+    public Mount() {
       deviceInterface = Device.InterfaceMask.Mount;
     }
 

@@ -23,9 +23,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_camera_test", "indig
 		{93BD8641-60BD-48C4-AC6E-284ED81505BF} = {93BD8641-60BD-48C4-AC6E-284ED81505BF}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_telescope", "indigo_telescope\indigo_telescope.csproj", "{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_mount", "indigo_mount\indigo_mount.csproj", "{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_telescope_test", "indigo_telescope_test\indigo_telescope_test.csproj", "{86267DFE-3981-4655-AECE-2C60718BEAEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_mount_test", "indigo_mount_test\indigo_mount_test.csproj", "{86267DFE-3981-4655-AECE-2C60718BEAEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

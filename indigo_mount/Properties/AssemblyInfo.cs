@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 //
 // TODO - Add your authorship information here
-[assembly: AssemblyTitle("ASCOM.INDIGO.Telescope")]
-[assembly: AssemblyDescription("ASCOM Telescope driver for INDIGO")]
+[assembly: AssemblyTitle("ASCOM.INDIGO.Mount")]
+[assembly: AssemblyDescription("ASCOM Mount driver for INDIGO")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("The ASCOM Initiative")]
-[assembly: AssemblyProduct("ASCOM Telescope driver for INDIGO")]
+[assembly: AssemblyProduct("ASCOM Mount driver for INDIGO")]
 [assembly: AssemblyCopyright("Copyright © 2018 The ASCOM Initiative")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
