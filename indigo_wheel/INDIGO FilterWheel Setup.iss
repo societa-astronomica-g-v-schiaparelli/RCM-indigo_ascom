@@ -4,14 +4,14 @@
 ;
 [Setup]
 AppID={{fd8e1019-78d3-4b3b-9eae-08a76af88b4d}
-AppName=ASCOM INDIGO FilterWheel FilterWheel Driver
-AppVerName=ASCOM INDIGO FilterWheel FilterWheel Driver 6.3.0.3
+AppName=ASCOM INDIGO FilterWheel  Driver
+AppVerName=ASCOM INDIGO FilterWheel  Driver 6.3.0.3
 AppVersion=6.3.0.3
 AppPublisher=CloudMakers, s. r. o. <info@cloudmakers.eu>
 AppPublisherURL=mailto:info@cloudmakers.eu
 AppSupportURL=http://tech.groups.yahoo.com/group/ASCOM-Talk/
 AppUpdatesURL=http://ascom-standards.org/
-VersionInfoVersion=1.0.0
+VersionInfoVersion=1.0.1
 MinVersion=0,5.0.2195sp4
 DefaultDirName="{cf}\ASCOM\FilterWheel"
 DisableDirPage=yes
@@ -22,7 +22,7 @@ Compression=lzma
 SolidCompression=yes
 ; Put there by Platform if Driver Installer Support selected
 WizardImageFile="..\WizardImage.bmp"
-LicenseFile="..\..\LICENSE.md"
+LicenseFile="..\LICENSE.md"
 ; {cf}\ASCOM\Uninstall\FilterWheel folder created by Platform, always
 UninstallFilesDir="{cf}\ASCOM\Uninstall\FilterWheel\INDIGO FilterWheel"
 
