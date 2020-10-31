@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_wheel", "indigo_wheel\indigo_wheel.csproj", "{64308775-BD4A-469C-BCAB-3ED830B811AF}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_camera", "indigo_camera\indigo_camera.csproj", "{93BD8641-60BD-48C4-AC6E-284ED81505BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_mount", "indigo_mount\indigo_mount.csproj", "{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indigo_camera2", "indigo_camera2\indigo_camera2.csproj", "{A2B4E7C7-D21D-43BE-8209-C2FB71B877A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B875AFA-A0AF-4B04-8897-54B0FB747D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2B4E7C7-D21D-43BE-8209-C2FB71B877A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B4E7C7-D21D-43BE-8209-C2FB71B877A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B4E7C7-D21D-43BE-8209-C2FB71B877A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B4E7C7-D21D-43BE-8209-C2FB71B877A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

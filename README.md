@@ -8,3 +8,4 @@ The ASCOM Platform implements the ASCOM interface standards and provides develop
 
 http://www.ascom-standards.org
 
+Added `indigo_camera2` folder to allow the simultaneous use of two cameras.
